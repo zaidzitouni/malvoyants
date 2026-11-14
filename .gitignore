@@ -14,9 +14,15 @@ wheels/
 .env.*
 
 # Downloaded datasets
+# (retirer cette ligne au moment de livrer si les images doivent être dans le dépôt :
+#  leurs licences CC le permettent, avec data/SOURCES.csv pour l'attribution)
 data/images/
+
+# Résultats régénérables par les scripts
+results/
 
 # Development tools
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
+.ipynb_checkpoints/

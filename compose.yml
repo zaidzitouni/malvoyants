@@ -1,0 +1,9 @@
+# Raccourci pour lancer le pipeline dans Docker sans retaper les volumes.
+# data/ et results/ restent sur votre disque : le conteneur les lit et y écrit.
+services:
+  ocr:
+    build: .
+    image: malvoyants
+    volumes:
+      - ./data:/app/data
+      - ./results:/app/results
