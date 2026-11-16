@@ -16,7 +16,7 @@ Pour chaque image de data/images/ :
 
 Sorties dans results/etape2/ :
   figures/<image>_debruitage.png, _zoom.png, _contraste.png
-  debruitage_reference.csv, contraste.csv, [ocr_pretraitement.csv]
+  debruitage_reference.csv, contraste.csv, [ocr_pretraitement.csv, synthese_ocr.csv]
   synthese_*.png (moyennes sur toute la base)
 
 Usage (depuis la racine du projet) :
@@ -40,7 +40,10 @@ sys.path.insert(0, str(RACINE / "src"))
 from acquisition import acquerir, lister_images  # noqa: E402
 from metrics_image import (ajouter_bruit, contraste_rms, entropie,  # noqa: E402
                            nettete, psnr, ssim)
+from evaluation import evaluer  # noqa: E402
 from preprocessing import CONTRASTE, DEBRUITAGE, estimer_bruit, pretraiter  # noqa: E402
+
+METRIQUES = ("cer", "wer", "precision_mots", "rappel_mots", "f1_mots")
 from visualization import barres_metriques, grille_methodes, zoom_comparatif  # noqa: E402
 
 BRUITS = [("gaussien", 15), ("poivre_sel", 5)]
@@ -58,22 +61,6 @@ def zone_la_plus_texturee(gris, taille=160):
     return int(x), int(y), taille, taille
 
 
-def cer(reference, hypothese):
-    """Character Error Rate = distance de Levenshtein / longueur de la référence.
-    (Version simple ici ; le module evaluation.py complet viendra à l'étape 7.)"""
-    r = " ".join(reference.lower().split())
-    h = " ".join(hypothese.lower().split())
-    if not r:
-        return 0.0 if not h else 1.0
-    prec = list(range(len(h) + 1))
-    for i, cr in enumerate(r, 1):
-        cour = [i]
-        for j, ch in enumerate(h, 1):
-            cour.append(min(prec[j] + 1, cour[j - 1] + 1, prec[j - 1] + (cr != ch)))
-        prec = cour
-    return prec[-1] / len(r)
-
-
 def main():
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     p.add_argument("--images", default=str(RACINE / "data" / "images"))
@@ -82,6 +69,7 @@ def main():
     p.add_argument("--max-images", type=int, default=0, help="0 = toutes")
     p.add_argument("--ocr", action="store_true", help="mesurer le CER Tesseract (lent)")
     p.add_argument("--langue", default="fra+eng")
+    p.add_argument("--psm", default="11", help="mode Tesseract (11 : meilleur en baseline)")
     p.add_argument("--seuil-reference", type=float, default=6.0,
                    help="σ estimé max pour qu'une image serve de référence propre (partie B)")
     args = p.parse_args()
@@ -106,12 +94,12 @@ def main():
     if args.ocr:
         f_ocr = open(sortie / "ocr_pretraitement.csv", "w", newline="", encoding="utf-8")
         w_ocr = csv.writer(f_ocr)
-        w_ocr.writerow(["image", "debruitage", "contraste", "cer", "texte_ocr"])
+        w_ocr.writerow(["image", "debruitage", "contraste", *METRIQUES, "nb_mots_lus", "texte_ocr"])
 
     moy_ssim = defaultdict(list)
     moy_temps = defaultdict(list)
     moy_rms = defaultdict(list)
-    moy_cer = defaultdict(list)
+    scores_ocr = defaultdict(lambda: defaultdict(list))  # combinaison -> métrique -> valeurs
 
     for k, chemin in enumerate(images, 1):
         nom = chemin.stem
@@ -164,17 +152,19 @@ def main():
 
         # --- D. Impact OCR ------------------------------------------------------
         gt = Path(args.verite) / f"{nom}.txt"
-        if args.ocr and gt.is_file():
-            reference = gt.read_text(encoding="utf-8")
+        reference = gt.read_text(encoding="utf-8").strip() if gt.is_file() else ""
+        if args.ocr and reference:
             for d in ("aucun", "median", "bilateral", "nlm"):
                 for c in ("aucun", "egalisation", "clahe"):
                     img = pretraiter(gris, d, c)
-                    texte = pytesseract.image_to_string(img, lang=args.langue, config="--psm 11")
-                    e = cer(reference, texte)
-                    w_ocr.writerow([chemin.name, d, c, f"{e:.3f}", " ".join(texte.split())])
-                    moy_cer[f"{d}+{c}"].append(e)
+                    texte = pytesseract.image_to_string(img, lang=args.langue, config=f"--psm {args.psm}")
+                    sc = evaluer(reference, texte)
+                    w_ocr.writerow([chemin.name, d, c, *(f"{sc[m]:.3f}" for m in METRIQUES),
+                                    len(texte.split()), " ".join(texte.split())])
+                    for m in METRIQUES:
+                        scores_ocr[f"{d}+{c}"][m].append(sc[m])
         elif args.ocr:
-            print(f"     (pas de vérité terrain {gt.name} : OCR ignoré)")
+            print(f"     (pas de vérité terrain remplie pour {gt.name} : OCR ignoré)")
 
     f_deb.close()
     f_con.close()
@@ -202,16 +192,29 @@ def main():
     print("\n=== Contraste RMS moyen ===\n  " + "  ".join(f"{m}={v:.3f}" for m, v in rms.items()))
     barres_metriques(rms, "Contraste RMS moyen (après NLM)", "RMS", sortie / "synthese_contraste.png")
 
-    if moy_cer:
-        # Le CER peut dépasser 1 quand Tesseract « hallucine » des caractères
-        # parasites dans le fond : on affiche aussi la médiane, moins sensible.
-        cers = {k: float(np.mean(v)) for k, v in sorted(moy_cer.items(), key=lambda kv: np.mean(kv[1]))}
-        print("\n=== CER Tesseract (plus bas = mieux) ===")
-        print(f"  {'combinaison':22s} {'moyen':>7s} {'médian':>7s}")
-        for k, v in cers.items():
-            print(f"  {k:22s} {v:7.3f} {float(np.median(moy_cer[k])):7.3f}")
-        barres_metriques(cers, "CER moyen Tesseract selon le prétraitement", "CER",
-                         sortie / "synthese_cer.png")
+    if scores_ocr:
+        # Mêmes métriques que la baseline (scripts/baseline_tesseract.py) pour
+        # une comparaison directe. Médianes : le CER peut dépasser 1 et
+        # quelques images « explosent » la moyenne.
+        n = len(next(iter(scores_ocr.values()))["cer"])
+        ordre = sorted(scores_ocr, key=lambda k: -np.median(scores_ocr[k]["f1_mots"]))
+        print(f"\n=== OCR selon le prétraitement ({n} image(s), psm {args.psm}, médianes) ===")
+        print(f"  {'combinaison':22s} {'CER':>7s} {'WER':>7s} {'précision':>10s} {'rappel':>7s} {'F1':>6s}")
+        for k in ordre:
+            v = scores_ocr[k]
+            print(f"  {k:22s} {np.median(v['cer']):7.3f} {np.median(v['wer']):7.3f} "
+                  f"{np.median(v['precision_mots']):10.3f} {np.median(v['rappel_mots']):7.3f} "
+                  f"{np.median(v['f1_mots']):6.3f}")
+        with open(sortie / "synthese_ocr.csv", "w", newline="", encoding="utf-8") as f:
+            w = csv.writer(f)
+            w.writerow(["combinaison", "n"] + [f"{m}_{s}" for m in METRIQUES for s in ("moy", "med")])
+            for k in ordre:
+                w.writerow([k, n] + [f"{fn(scores_ocr[k][m]):.3f}" for m in METRIQUES
+                                     for fn in (np.mean, np.median)])
+        for m, titre in (("cer", "CER médian"), ("rappel_mots", "Rappel médian des mots"),
+                         ("f1_mots", "F1 médian des mots")):
+            barres_metriques({k: float(np.median(scores_ocr[k][m])) for k in ordre},
+                             f"{titre} selon le prétraitement", m, sortie / f"synthese_{m}.png")
 
     print(f"\nRésultats : {sortie}")
 

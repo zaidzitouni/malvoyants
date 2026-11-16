@@ -88,3 +88,26 @@ def barres_metriques(valeurs, titre, ylabel, chemin):
     fig.tight_layout()
     fig.savefig(chemin, dpi=150)
     plt.close(fig)
+
+
+def histogramme_seuils(gris, seuils, chemin, titre=None):
+    """Histogramme des niveaux de gris avec les seuils globaux superposés
+    (ex. {"fixe": 127, "otsu": 112, "triangle": 158}). Figure pédagogique :
+    montre pourquoi un seuil unique tombe bien ou mal selon la forme de
+    l'histogramme (bimodal ou non)."""
+    couleurs = ["#C44E52", "#55A868", "#8172B2", "#CCB974", "#64B5CD"]
+    fig, ax = plt.subplots(figsize=(7, 3))
+    hist = np.bincount(gris.ravel(), minlength=256)
+    ax.fill_between(np.arange(256), hist, color="#4C72B0", alpha=0.7, linewidth=0)
+    for (nom, t), coul in zip(seuils.items(), couleurs):
+        ax.axvline(t, color=coul, linewidth=1.5, label=f"{nom} : T = {t:.0f}")
+    ax.set_xlim(0, 255)
+    ax.set_yticks([])
+    ax.set_xlabel("niveau de gris", fontsize=9)
+    ax.legend(fontsize=8, frameon=False)
+    ax.spines[["top", "right", "left"]].set_visible(False)
+    if titre:
+        ax.set_title(titre, fontsize=10)
+    fig.tight_layout()
+    fig.savefig(chemin, dpi=150)
+    plt.close(fig)
