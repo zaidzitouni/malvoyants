@@ -91,13 +91,39 @@ def lire_region(image_prete, langue="fra+eng", psm=7, confiance_min=CONFIANCE_MI
     return texte, conf_moy, mots
 
 
+def separabilite(region):
+    """Qualité de la séparation texte / fond d'une région : part de la variance
+    expliquée par le seuil d'Otsu (critère η d'Otsu, entre 0 et 1). Proche de 1
+    quand la région a deux populations nettes (lettres / fond)."""
+    if region.size == 0 or region.std() < 1:
+        return 0.0
+    t, _ = cv2.threshold(region, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
+    r = region.astype(np.float64)
+    bas, haut = r[r <= t], r[r > t]
+    if bas.size == 0 or haut.size == 0:
+        return 0.0
+    w0, w1 = bas.size / r.size, haut.size / r.size
+    return float(w0 * w1 * (bas.mean() - haut.mean()) ** 2 / r.var())
+
+
+def choisir_canal(images, boite):
+    """Parmi plusieurs canaux (gris, b de Lab…), celui où la région est la mieux
+    séparée de son fond : c'est lui qu'on donnera à Tesseract."""
+    x, y, w, h = boite
+    return max(images.values(), key=lambda im: separabilite(im[y:y + h, x:x + w]))
+
+
 def lire_regions(gris, boites, binarisation="sauvola", langue="fra+eng", psm=7,
-                 confiance_min=CONFIANCE_MIN):
+                 confiance_min=CONFIANCE_MIN, canaux=None):
     """OCR de toutes les régions (dans l'ordre fourni, normalement l'ordre de
-    lecture). Renvoie (texte complet sur plusieurs lignes, détail par région)."""
+    lecture). Renvoie (texte complet sur plusieurs lignes, détail par région).
+    canaux : canaux supplémentaires (voir text_detection.canaux_couleur) ; pour
+    chaque région on lit le canal où elle est la plus contrastée."""
+    images = {"gris": gris, **(canaux or {})}
     details = []
     for boite in boites:
-        img = preparer_region(gris, boite, binarisation)
+        source = choisir_canal(images, boite) if len(images) > 1 else gris
+        img = preparer_region(source, boite, binarisation)
         texte, conf, _ = lire_region(img, langue, psm, confiance_min)
         details.append({"boite": boite, "texte": texte, "confiance": conf, "image": img})
     lignes = [d["texte"] for d in details if d["texte"]]

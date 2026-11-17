@@ -27,7 +27,8 @@ Sorties globales : localisation.csv, synthese_localisation.csv, synthese_*.png
 Usage (depuis la racine du projet) :
   uv run scripts/etape4_localisation.py --max-images 5
   uv run scripts/etape4_localisation.py
-  uv run scripts/etape4_localisation.py --detecteurs morpho --binarisations otsu sauvola
+  uv run scripts/etape4_localisation.py --detecteurs mser --binarisations otsu aucune \
+      --canaux b_lab clahe --sortie results/etape4_couleur
 """
 
 import argparse
@@ -46,7 +47,7 @@ sys.path.insert(0, str(RACINE / "src"))
 from acquisition import acquerir, charger_image, lister_images  # noqa: E402
 from evaluation import evaluer  # noqa: E402
 from ocr import lire_regions  # noqa: E402
-from text_detection import detecter_texte  # noqa: E402
+from text_detection import CANAUX_DISPONIBLES, HAUTEUR_MIN, MAX_REGIONS, canaux_couleur, detecter_texte  # noqa: E402
 from visualization import barres_metriques  # noqa: E402
 
 import matplotlib  # noqa: E402
@@ -100,9 +101,14 @@ def main():
     p.add_argument("--verite", default=str(RACINE / "data" / "ground_truth"))
     p.add_argument("--sortie", default=str(RACINE / "results" / "etape4"))
     p.add_argument("--max-images", type=int, default=0, help="0 = toutes")
-    p.add_argument("--detecteurs", nargs="+", default=["morpho", "mser", "union"])
+    p.add_argument("--detecteurs", nargs="+", default=["mser", "morpho", "union"])
     p.add_argument("--binarisations", nargs="+", default=["aucune", "otsu", "sauvola"])
-    p.add_argument("--config-planches", default="morpho+otsu",
+    p.add_argument("--canaux", nargs="*", default=[], choices=CANAUX_DISPONIBLES,
+                   help="canaux en plus du gris : b_lab (couleur), clahe (faible contraste)")
+    p.add_argument("--hauteur-min", type=float, default=HAUTEUR_MIN,
+                   help="hauteur minimale d'une ligne, en fraction de la hauteur de l'image")
+    p.add_argument("--max-regions", type=int, default=MAX_REGIONS, help="0 = pas de plafond")
+    p.add_argument("--config-planches", default="mser+otsu",
                    help="configuration utilisée pour les planches de régions et les textes restitués")
     p.add_argument("--confiance", type=float, default=50, help="confiance Tesseract minimale par mot")
     p.add_argument("--langue", default="fra+eng")
@@ -128,6 +134,8 @@ def main():
     configs = [f"{d}+{b}" for d in args.detecteurs for b in args.binarisations]
     print(f"{len(paires)} image(s) | configurations : {', '.join(configs)}"
           f"{'' if args.sans_reference else ' + sans_localisation'}")
+    print(f"canaux : gris{''.join(' + ' + c for c in args.canaux)} | hauteur min : {args.hauteur_min:.1%}"
+          f" | plafond : {args.max_regions or 'aucun'} régions")
 
     scores = defaultdict(lambda: defaultdict(list))
     temps = defaultdict(list)
@@ -138,6 +146,7 @@ def main():
         w.writerow(["image", "configuration", "nb_regions", *METRIQUES, "temps_s", "nb_mots_lus", "texte_ocr"])
         for n, (chemin, reference) in enumerate(paires, 1):
             couleur, gris = acquerir(chemin)
+            canaux = canaux_couleur(couleur, args.canaux) if args.canaux else None
             resume = []
 
             if not args.sans_reference:
@@ -156,14 +165,17 @@ def main():
             detections = {}
             for det in args.detecteurs:
                 t0 = time.perf_counter()
-                detections[det] = (*detecter_texte(gris, det), time.perf_counter() - t0)
+                detections[det] = (*detecter_texte(gris, det, canaux=canaux, hauteur_min=args.hauteur_min,
+                                                   max_regions=args.max_regions or None),
+                                   time.perf_counter() - t0)
 
             for det in args.detecteurs:
                 boites, infos, t_det = detections[det]
                 for binz in args.binarisations:
                     cfg = f"{det}+{binz}"
                     t0 = time.perf_counter()
-                    texte, details = lire_regions(gris, boites, binz, args.langue, confiance_min=args.confiance)
+                    texte, details = lire_regions(gris, boites, binz, args.langue, confiance_min=args.confiance,
+                                                  canaux=canaux)
                     dt = t_det + time.perf_counter() - t0
                     sc = evaluer(reference, texte)
                     for m in METRIQUES:

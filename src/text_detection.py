@@ -52,6 +52,15 @@ import numpy as np
 from binarization import normaliser_polarite
 
 MIN_CARACTERES = 2
+# Hauteur minimale d'une ligne de texte, en fraction de la hauteur de l'image.
+# 0,8 % éliminait les petits panneaux lointains (plaques_036 : « ANFOUD »,
+# lettres d'environ 0,6 % de la hauteur). 0,5 % ≈ 8 px sur une image de 1600 px,
+# ce qui reste au-dessus de la limite de lisibilité de Tesseract après
+# agrandissement de la région.
+HAUTEUR_MIN = 0.005
+# Plafond du nombre de régions envoyées à Tesseract (temps de calcul : jusqu'à
+# 90 régions et 47 s sur une image de feuillage avec 50 images de test).
+MAX_REGIONS = 40
 
 
 # ---------------------------------------------------------------------------
@@ -207,7 +216,7 @@ def decouper_lignes(gris, boite):
 # 1. Détecteur morphologique
 # ---------------------------------------------------------------------------
 
-def candidats_morphologie(gris, largeur_fermeture=None):
+def candidats_morphologie(gris, largeur_fermeture=None, hauteur_min=HAUTEUR_MIN):
     H, W = gris.shape
     lisse = cv2.bilateralFilter(gris, 7, 40, 40)
     noyau = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (3, 3))
@@ -229,7 +238,7 @@ def candidats_morphologie(gris, largeur_fermeture=None):
     boites = []
     for c in contours:
         x, y, w, h = cv2.boundingRect(c)
-        if not (0.008 * H <= h <= 0.2 * H):         # hauteur de ligne plausible
+        if not (hauteur_min * H <= h <= 0.2 * H):   # hauteur de ligne plausible
             continue
         if w < 0.8 * h or w > 0.95 * W:              # « 42 » a w ≈ h ; pas toute la largeur
             continue
@@ -284,7 +293,7 @@ def _regrouper_en_lignes(lettres):
     return boites
 
 
-def candidats_mser(gris, delta=5):
+def candidats_mser(gris, delta=5, hauteur_min=HAUTEUR_MIN):
     H, W = gris.shape
     aire_min = max(30, int(1e-5 * H * W))
     aire_max = int(0.01 * H * W)
@@ -295,7 +304,7 @@ def candidats_mser(gris, delta=5):
     _, rects = mser.detectRegions(cv2.bilateralFilter(gris, 7, 40, 40))
     lettres = []
     for x, y, w, h in rects:
-        if not (0.008 * H <= h <= 0.2 * H):
+        if not (hauteur_min * H <= h <= 0.2 * H):
             continue
         if not (0.1 <= w / h <= 1.5):                # « I » fin … « W » large
             continue
@@ -317,7 +326,36 @@ DETECTEURS = {
 ECHELLES = (1.0, 0.5, 0.25)
 
 
-def _candidats_multi_echelles(gris, detecteur, echelles=ECHELLES):
+CANAUX_DISPONIBLES = ("b_lab", "clahe")
+
+
+def canaux_couleur(couleur, noms=CANAUX_DISPONIBLES):
+    """Canaux supplémentaires sur lesquels chercher le texte (en plus du gris).
+
+    b_lab : canal b de l'espace Lab (axe jaune ↔ bleu). La conversion en gris
+            ne garde que la luminance : un texte qui se distingue de son fond
+            par la COULEUR mais pas par la luminosité y devient invisible.
+            Cas typique : lettres blanches sur plaque dorée (plaques_016,
+            « PORTE DU LOUVRE » : rien en gris, « DU LOUVRE » avec ce canal).
+    clahe : gris après égalisation adaptative (CLAHE). Fait ressortir le texte
+            peu contrasté : contre-jour, lettres gravées (plaques_024,
+            « RUE PALATINE » : rien en gris, « PALATINE » avec ce canal).
+    Testés et écartés : le canal a de Lab (rien apporté) et la saturation
+    (beaucoup de fausses détections).
+    Contrepartie : plus de candidats, donc plus de fausses régions et un temps
+    de calcul environ doublé avec les deux canaux."""
+    gris = cv2.cvtColor(couleur, cv2.COLOR_BGR2GRAY)
+    disponibles = {
+        "b_lab": lambda: cv2.cvtColor(couleur, cv2.COLOR_BGR2LAB)[:, :, 2],
+        "clahe": lambda: cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8, 8)).apply(gris),
+    }
+    inconnus = set(noms) - set(disponibles)
+    if inconnus:
+        raise KeyError(f"Canaux inconnus : {inconnus} (disponibles : {list(disponibles)})")
+    return {n: disponibles[n]() for n in noms}
+
+
+def _candidats_multi_echelles(gris, detecteur, echelles=ECHELLES, **params):
     """PYRAMIDE D'ÉCHELLES. Les noyaux des détecteurs ont une taille fixe en
     pixels (fermeture de 3 px de haut, gradient 3×3) : ils conviennent à des
     lettres de ~10 à 30 px. Une grande plaque photographiée de près (lettres
@@ -331,35 +369,60 @@ def _candidats_multi_echelles(gris, detecteur, echelles=ECHELLES):
         if min(H, W) * e < 200:
             continue
         img = gris if e == 1.0 else cv2.resize(gris, None, fx=e, fy=e, interpolation=cv2.INTER_AREA)
-        boites, inf = detecteur(img)
+        boites, inf = detecteur(img, **params)
         if e == 1.0:
             infos = inf
         candidats += [(int(x / e), int(y / e), int(w / e), int(h / e)) for x, y, w, h in boites]
     return candidats, infos
 
 
-def detecter_texte(gris, methode="morpho", verifier=True, echelles=ECHELLES):
+def detecter_texte(gris, methode="mser", verifier=True, echelles=ECHELLES,
+                   canaux=None, hauteur_min=HAUTEUR_MIN, max_regions=MAX_REGIONS):
     """Renvoie (boîtes retenues dans l'ordre de lecture, infos de débogage).
 
-    methode  : "morpho", "mser" ou "union" (les deux détecteurs combinés :
-               plus de rappel, au prix de doublons fusionnés ensuite).
-    echelles : pyramide utilisée ; (1.0,) pour désactiver."""
+    methode     : "mser" (meilleur sur les 50 images), "morpho" ou "union".
+    echelles    : pyramide utilisée ; (1.0,) pour désactiver.
+    canaux      : dictionnaire {nom: image 1 canal} en plus du gris (voir
+                  canaux_couleur) ; None = niveaux de gris seuls.
+    hauteur_min : hauteur minimale d'une ligne (fraction de la hauteur).
+    max_regions : on garde au plus ce nombre de régions, celles qui contiennent
+                  le plus de caractères vérifiés ; None = pas de plafond."""
     if methode == "union":
-        b1, i1 = _candidats_multi_echelles(gris, candidats_morphologie, echelles)
-        b2, i2 = _candidats_multi_echelles(gris, candidats_mser, echelles)
-        candidats, infos = b1 + b2, {**i1, **i2}
+        fonctions = [candidats_morphologie, candidats_mser]
     elif methode in DETECTEURS:
-        candidats, infos = _candidats_multi_echelles(gris, DETECTEURS[methode], echelles)
+        fonctions = [DETECTEURS[methode]]
     else:
         raise KeyError(f"Détecteur inconnu : {methode} ({list(DETECTEURS) + ['union']})")
-    infos["candidats"] = list(candidats)
+    images = {"gris": gris, **(canaux or {})}
+
+    candidats, infos = [], {}
+    for nom, img in images.items():
+        for f in fonctions:
+            b, inf = _candidats_multi_echelles(img, f, echelles, hauteur_min=hauteur_min)
+            candidats += [(boite, nom) for boite in b]
+            if nom == "gris":
+                infos.update(inf)
+    infos["candidats"] = [b for b, _ in candidats]
+
     if verifier:
+        # Chaque candidat est vérifié sur le canal où il a été trouvé : en gris,
+        # les lettres blanches sur fond doré ne se segmentent pas.
         retenus = []
-        for b in candidats:
-            if verifier_ligne(gris, b)[0]:
-                retenus.append(b)
+        for b, nom in candidats:
+            ok, n = verifier_ligne(images[nom], b)
+            if ok:
+                retenus.append((b, n))
             else:  # peut-être plusieurs lignes collées : on tente de les séparer
-                retenus += [s for s in decouper_lignes(gris, b) if verifier_ligne(gris, s)[0]]
-        candidats = retenus
-    boites = fusionner_boites(candidats)
+                for s_ in decouper_lignes(images[nom], b):
+                    ok, n = verifier_ligne(images[nom], s_)
+                    if ok:
+                        retenus.append((s_, n))
+    else:
+        retenus = [(b, 0) for b, _ in candidats]
+
+    boites = fusionner_boites([b for b, _ in retenus])
+    if max_regions and len(boites) > max_regions:
+        score = {b: n for b, n in retenus}
+        boites = sorted(boites, key=lambda b: (score.get(b, 0), b[2] * b[3]), reverse=True)[:max_regions]
+        infos["plafond_atteint"] = True
     return ordre_de_lecture(boites), infos
