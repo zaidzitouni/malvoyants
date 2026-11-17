@@ -1,0 +1,4 @@
+configuration,n,cer_moy,cer_med,wer_moy,wer_med,precision_mots_moy,precision_mots_med,rappel_mots_moy,rappel_mots_med,f1_mots_moy,f1_mots_med,regions_med,temps_moy_s
+mser+aucune,50,0.866,0.692,1.337,1.000,0.334,0.275,0.379,0.323,0.322,0.358,14,5.48
+mser+otsu,50,0.956,0.666,1.688,1.000,0.320,0.250,0.387,0.400,0.326,0.281,14,5.47
+sans_localisation,50,23.713,6.588,37.145,11.823,0.066,0.007,0.260,0.120,0.086,0.014,,2.92

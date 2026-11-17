@@ -1,0 +1,20 @@
+\begin{table}[htbp]
+\centering
+\small
+\begin{tabular}{lrcccccc}
+\toprule
+ & & \multicolumn{2}{c}{F1 médian} & \multicolumn{2}{c}{Précision méd.} & \multicolumn{2}{c}{Rappel méd.} \\
+\cmidrule(lr){3-4}\cmidrule(lr){5-6}\cmidrule(lr){7-8}
+Catégorie & $n$ & base & finale & base & finale & base & finale \\
+\midrule
+affiches & 5 & 0{,}06 & 0{,}10 & 0{,}03 & 0{,}14 & 0{,}38 & 0{,}08 \\
+numeros & 3 & 0{,}00 & 0{,}00 & 0{,}00 & 0{,}00 & 0{,}00 & 0{,}00 \\
+panneaux & 7 & 0{,}01 & 0{,}58 & 0{,}01 & 0{,}67 & 0{,}29 & 1{,}00 \\
+plaques & 35 & 0{,}01 & 0{,}27 & 0{,}01 & 0{,}20 & 0{,}12 & 0{,}33 \\
+\midrule
+\textbf{toutes} & 50 & 0{,}01 & 0{,}28 & 0{,}01 & 0{,}25 & 0{,}12 & 0{,}40 \\
+\bottomrule
+\end{tabular}
+\caption{Baseline (Tesseract psm 11 sur l'image brute) et configuration finale (etape4\_v2 : mser + otsu), par catégorie d'image.}
+\label{tab:categories}
+\end{table}

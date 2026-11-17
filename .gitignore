@@ -19,7 +19,7 @@ wheels/
 # data/images/
 
 # Résultats régénérables par les scripts
-results/
+# results/
 
 # Development tools
 .pytest_cache/

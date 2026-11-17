@@ -1,15 +1,17 @@
+# Image du pipeline : Python 3.14 + dépendances figées (uv.lock) + Tesseract.
+#
 # Python 3.14 sur Debian Bookworm (variante figée : les noms des paquets
 # système ci-dessous sont garantis, contrairement au tag "slim" seul qui
-# peut changer de version de Debian).
+# peut changer de version de Debian). Tesseract de Bookworm : version 5.3.
 FROM python:3.14-slim-bookworm
 
-# Install uv (version figée)
+# uv (version figée)
 COPY --from=ghcr.io/astral-sh/uv:0.11.24 /uv /uvx /bin/
 
 # Dépendances système :
 #  - tesseract-ocr        moteur OCR (anglais inclus)
 #  - tesseract-ocr-fra    français
-#  - tesseract-ocr-ara    arabe (plaques bilingues marocaines)
+#  - tesseract-ocr-ara    arabe (plaques bilingues marocaines, option --langue fra+eng+ara)
 #  - libglib2.0-0         requis par opencv-python-headless
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
@@ -18,25 +20,32 @@ RUN apt-get update \
 
 WORKDIR /app
 
-# Configure uv
+# - MPLBACKEND=Agg : figures sans écran.
+# - MPLCONFIGDIR / HOME dans /tmp : le conteneur tourne avec VOTRE identifiant
+#   d'utilisateur (voir compose.yml), qui n'a pas de dossier personnel dans
+#   l'image ; Matplotlib et fontconfig y écrivent leurs caches.
+# - PYTHONDONTWRITEBYTECODE : /app appartient à root, inutile d'y tenter des .pyc.
 ENV UV_COMPILE_BYTECODE=1 \
     UV_LINK_MODE=copy \
     MPLBACKEND=Agg \
+    MPLCONFIGDIR=/tmp/matplotlib \
+    HOME=/tmp \
+    PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1
 
-# Install dependencies first (couche mise en cache tant que pyproject.toml
-# et uv.lock ne changent pas). --no-dev : pas de Jupyter dans l'image.
+# Dépendances d'abord : couche mise en cache tant que pyproject.toml et uv.lock
+# ne changent pas. --no-dev : pas de Jupyter dans l'image.
 COPY pyproject.toml uv.lock ./
 RUN uv sync --locked --no-dev --no-install-project
 
-# Copy application (data/ et results/ sont exclus par .dockerignore : montés en volumes)
-COPY . .
+# Code (data/, results/ et docs/ sont exclus par .dockerignore : montés en volumes)
+COPY src/ ./src/
+COPY scripts/ ./scripts/
 
-# Use the virtual environment
 ENV PATH="/app/.venv/bin:$PATH"
 
-# L'image lance n'importe quel script du projet :
-#   docker compose run --rm ocr scripts/telecharger_commons.py --preset
-#   docker compose run --rm ocr scripts/etape2_pretraitement.py --ocr
+# L'image exécute n'importe quel script du projet ; par défaut, l'application :
+#   docker compose run --rm ocr scripts/lire_image.py data/images/... --carte results/carte.png
+#   docker compose run --rm ocr scripts/benchmark.py
 ENTRYPOINT ["python"]
-CMD ["scripts/etape2_pretraitement.py", "--help"]
+CMD ["scripts/lire_image.py", "--help"]

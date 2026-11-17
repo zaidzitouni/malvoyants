@@ -1,0 +1,501 @@
+image,configuration,nb_regions,cer,wer,precision_mots,rappel_mots,f1_mots,temps_s,nb_mots_lus,texte_ocr
+affiches_001.jpg,sans_localisation,,8.333,18.500,0.000,0.000,0.000,5.58,74,"A À N le k \ hg} | AN | il | Ba NU S , ae rae Fu Oye ia) a! [Q rh) Le! mm, 1m ~ Fe 0 il tl dem “BE = pt = ee ees RS ae ; r=, « nn, vi i= ie ™ EL - ali = + Be an 1 BRS = 4 oe —+ a 71 A! a = IY il, a —— ore. be Fad"
+affiches_001.jpg,morpho+aucune,13,0.833,1.250,0.000,0.000,0.000,5.72,5,(1) | 4) | Assoc | q | Le
+affiches_001.jpg,morpho+otsu,13,0.833,1.000,0.000,0.000,0.000,5.28,3,4° | ASSO | af
+affiches_001.jpg,morpho+sauvola,13,0.542,0.750,0.250,0.250,0.250,5.34,4,Rocky | wer | L] | s
+affiches_001.jpg,mser+aucune,16,0.583,1.250,0.000,0.000,0.000,6.31,5,Rock | wer | LIN | if | Il
+affiches_001.jpg,mser+otsu,16,0.625,1.500,0.000,0.000,0.000,6.30,6,Ww | Rock | wer | Ÿ | bool | Ÿ
+affiches_001.jpg,mser+sauvola,16,0.458,1.000,0.000,0.000,0.000,7.47,4,Rock | wer | hool | at
+affiches_001.jpg,union+aucune,22,0.917,1.750,0.000,0.000,0.000,8.59,7,LIN | (1) | 4) | Assoc | q | if | Le
+affiches_001.jpg,union+otsu,22,0.917,1.750,0.000,0.000,0.000,9.04,7,Ww | Ÿ | bool | 4° | ASSO | Ÿ | af
+affiches_001.jpg,union+sauvola,22,0.417,1.000,0.200,0.250,0.222,8.97,5,Rocky | wer | L] | hool | s
+affiches_004.jpg,sans_localisation,,6.425,10.875,0.033,0.375,0.061,6.73,90,aa SE LL edf A a ye set + = i À a4 B ili tl = EET Re AS SALON / BARBER ONS er aoe or oo = oo Se le D DÉC eos D sense mr ak on = TS Sa a oe eee ene bd £4 cs CR ERRORS ag a at || TT * * EE | ( If # | | 7 HO YOU ESS Hill il iS PS Bis ae 2 Ti TT us) TETE == EC a i ae Sori sant ——SS=——__ es
+affiches_004.jpg,morpho+aucune,12,0.775,1.000,0.000,0.000,0.000,10.36,5,Le | AR | LE. | ET | As
+affiches_004.jpg,morpho+otsu,12,0.925,1.000,0.000,0.000,0.000,5.79,3,AT | wt | 4
+affiches_004.jpg,morpho+sauvola,12,0.925,1.000,0.000,0.000,0.000,6.52,3,2 | AT | 4
+affiches_004.jpg,mser+aucune,8,0.450,0.625,0.600,0.375,0.462,4.93,5,HE ROSE OF SHARON'S | AA
+affiches_004.jpg,mser+otsu,8,0.625,0.875,0.500,0.375,0.429,4.85,6,At | ee | HE ROSE OF SHARON'S
+affiches_004.jpg,mser+sauvola,8,0.425,0.625,0.429,0.375,0.400,4.74,7,HE ROSE OF SHARON'S | A | F | x2
+affiches_004.jpg,union+aucune,18,0.775,1.000,0.000,0.000,0.000,13.34,6,Le | AR | AA | LE. | ET | As
+affiches_004.jpg,union+otsu,18,0.850,1.000,0.000,0.000,0.000,11.65,5,AT | At | ee | wt | 4
+affiches_004.jpg,union+sauvola,18,0.825,1.000,0.000,0.000,0.000,16.26,6,2 | AT | A | F | 4 | x2
+affiches_007.jpg,sans_localisation,,2.071,6.000,0.000,0.000,0.000,4.37,24,à. te CT re À Pa ne || POOL ae D ss f =a | oe Vie r= ot mr AT 4 —_ eo.
+affiches_007.jpg,morpho+aucune,13,0.821,1.000,0.000,0.000,0.000,8.95,4,vu | [IT | oy | A
+affiches_007.jpg,morpho+otsu,13,0.857,1.000,0.000,0.000,0.000,9.33,3,A | vw | id
+affiches_007.jpg,morpho+sauvola,13,0.893,1.000,0.000,0.000,0.000,11.66,3,a | vw | 4
+affiches_007.jpg,mser+aucune,10,0.821,1.000,0.000,0.000,0.000,6.87,3,i | LE | all
+affiches_007.jpg,mser+otsu,10,0.893,1.000,0.000,0.000,0.000,7.06,2,Va | di
+affiches_007.jpg,mser+sauvola,10,0.893,1.000,0.000,0.000,0.000,6.97,2,Va | Ai
+affiches_007.jpg,union+aucune,21,0.821,1.500,0.000,0.000,0.000,12.37,6,vu | [IT | oy | i | all | A
+affiches_007.jpg,union+otsu,21,0.857,1.000,0.000,0.000,0.000,13.10,4,A | vw | di | id
+affiches_007.jpg,union+sauvola,21,0.857,1.000,0.000,0.000,0.000,12.74,4,a | vw | 4 | Ai
+affiches_010.jpg,sans_localisation,,3.250,6.154,0.071,0.462,0.122,3.83,85,"(24 ‘de, ae ‘eR a F4 & = es) aa er “à à 4 mv ie ea +78 Lee 7 ia: +: cs Aly À LA > KR ae — —— — = ins elure & Co || ""A CONSULTING & CREATIVE SPAC} | | a 4 || HCL | mal 4160 ti ak it. alli; eo NT 4 = C1 - i diet l —_ me Mai] | he Ê== — ©) DEEE hs id eee = ——7- iil Lt er i -— i"
+affiches_010.jpg,morpho+aucune,48,0.838,1.000,0.000,0.000,0.000,25.01,6,à | fr | ey | elevale | LÉ | th
+affiches_010.jpg,morpho+otsu,48,0.809,1.000,0.000,0.000,0.000,22.63,8,27. | an | À 7 | ie | RE | AR | 7
+affiches_010.jpg,morpho+sauvola,48,0.956,1.000,0.000,0.000,0.000,23.97,2,it | D
+affiches_010.jpg,mser+aucune,19,0.912,1.000,0.000,0.000,0.000,9.99,4,1 | Deh | Co. | 7
+affiches_010.jpg,mser+otsu,19,0.824,1.000,0.143,0.077,0.100,9.80,7,-4 | Del | e ure | Co | L | Eu
+affiches_010.jpg,mser+sauvola,19,0.853,1.000,0.250,0.077,0.118,9.96,4,Del | e ure | Co
+affiches_010.jpg,union+aucune,58,0.809,1.000,0.000,0.000,0.000,28.91,8,à | fr | 1 | ey | elevale | LÉ | th | 7
+affiches_010.jpg,union+otsu,58,0.779,1.000,0.000,0.000,0.000,28.69,10,27. | an | À 7 | -4 | ie | RE | Eu | AR | 7
+affiches_010.jpg,union+sauvola,58,0.956,1.000,0.000,0.000,0.000,28.00,2,it | D
+affiches_011.jpg,sans_localisation,,2.729,6.438,0.055,0.375,0.096,5.43,109,"AP) Mo AEM Ses, A Ma 4, a D8: ay a i 4 ‘a % ee fé à # 7 # ÿ Ki ÿ à À ‘a #5 LA % a “ eee; # rm oy or, By, ize be of FA oe — 4 — — Ce — RE + A a “= 1 FREEDOM ROAD \ J #. Christian Murs ol HES & Muns 1 ammo i ceracore| = _ — LASER ENGRAVING = RS Re Se ER _ re 1] G NS A AN = LE, + = = a os ae ARS 3 “4 cu ei Le ms Ss iB LE Re RS ie ="
+affiches_011.jpg,morpho+aucune,22,0.417,0.812,0.333,0.188,0.240,10.90,9,"FREEDOM | Christian, | [eu AMMO CERAKOTEN | LASERENGRAVING | 720:G: | À | AMMO"
+affiches_011.jpg,morpho+otsu,22,0.323,0.500,0.643,0.562,0.600,13.00,14,e | FREEDOM ROAD | Christian | GU | GUNS AMMO CERAKOTE | LASER ENGRAVING | 2 0 | AMMO | a
+affiches_011.jpg,morpho+sauvola,22,0.385,0.688,0.636,0.438,0.519,10.85,11,o 6 | FREEDOM ROAD | Christian | GUNS AMMO CERAKOTE | LASERENGRAVING | AMMO | 7
+affiches_011.jpg,mser+aucune,12,0.500,0.812,0.556,0.312,0.400,6.80,9,4 | FREEDOM | Christi | 1/ | CERAKOTE| | LASER ENGRAVING | 720-G | AMMO
+affiches_011.jpg,mser+otsu,12,0.292,0.500,0.692,0.562,0.621,6.31,13,FREEDOM ROAD | Christ | tri | GUNS AMMO CERAKOTE | LASER ENGRAVING | 720-G | 120 | AMMO | tf
+affiches_011.jpg,mser+sauvola,12,0.396,0.562,0.727,0.500,0.593,6.84,11,FREEDOM ROAD | Ch oh | tr! | GUNS AMMO CERAKOTE | LASER ENGRAVING | AMMO
+affiches_011.jpg,union+aucune,25,0.438,0.875,0.300,0.188,0.231,17.06,10,"4 | FREEDOM | Christian, | [eu AMMO CERAKOTEN | LASERENGRAVING | 720:G: | À | AMMO"
+affiches_011.jpg,union+otsu,25,0.323,0.500,0.692,0.562,0.621,12.55,13,e | FREEDOM ROAD | Christian | GU | GUNS AMMO CERAKOTE | LASER ENGRAVING | 120 | AMMO | a
+affiches_011.jpg,union+sauvola,25,0.385,0.688,0.636,0.438,0.519,12.63,11,o 6 | FREEDOM ROAD | Christian | GUNS AMMO CERAKOTE | LASERENGRAVING | AMMO | 7
+numeros_003.jpg,sans_localisation,,19.680,30.000,0.000,0.000,0.000,7.69,180,"EEE =~ pe =) || a? ES » a3 | | él x. ee À | (en | Na Ws & LS RER NY veh iS: 5 Sg “ee ee vk V4 ge ‘ol | & t EN Mi ‘oe ici Aa) Ze — <G = — ——— A ME > Nt id! Sa Mar 7 \\ al S| | Reg Re > % i A = Mo eM <@ | x ti i re j . & Se {| Si {|| Fa Rs oN i PRE \|| ie | AE uk Ne vy à: t as ae 27 oe ANY ay eS a | fi x ee hd PG à @ Le 3 af uns à SE | \\ AN + ie aye 41 ys. il 1 ma EU SE 1m {| ‘à | ll \\ À > | it à 1 I fi + i it bei | | i ae i IA Bam hire SZ = SS a “que a JAN. 2024 28 ""aR ae eS fe a > ae Maton des dde it VU A ae"
+numeros_003.jpg,morpho+aucune,18,0.800,1.000,0.000,0.000,0.000,9.66,5,C+2 | A | À | CE | 4
+numeros_003.jpg,morpho+otsu,18,0.880,1.000,0.000,0.000,0.000,8.64,4,3 à | tt | LE
+numeros_003.jpg,morpho+sauvola,18,0.760,1.167,0.000,0.000,0.000,8.73,7,5 à | ut f | 2 | NE | in
+numeros_003.jpg,mser+aucune,12,0.760,1.000,0.000,0.000,0.000,6.21,4,ta. | rta | Nés! | Fe
+numeros_003.jpg,mser+otsu,12,0.760,1.167,0.000,0.000,0.000,6.08,7,“a | ta. | (a | RG | Nés! | gt | Rg
+numeros_003.jpg,mser+sauvola,12,0.680,1.000,0.167,0.167,0.167,6.01,6,Bx | ta. | Tia | Ne | Nos | 1
+numeros_003.jpg,union+aucune,20,0.800,1.000,0.000,0.000,0.000,10.71,6,C+2 | A | À | CE | 4 | Fe
+numeros_003.jpg,union+otsu,20,0.800,1.000,0.000,0.000,0.000,10.49,6,gt | 3 à | tt | LE | Rg
+numeros_003.jpg,union+sauvola,20,0.760,1.167,0.000,0.000,0.000,10.80,7,5 à | ut f | 1 | 2 | NE
+numeros_005.jpg,sans_localisation,,11.892,33.000,0.000,0.000,0.000,4.98,165,"AK | nn _—_— 4a ee == Ped = Be SS ches || re rs a, PES Lu ry ie à Ah = | | = | Al rie EE"" bib a) a x | + = ig —s z LJ FE | Il ee ae BI IL) | ry | = Sa a > L = =o 4 = el = oa — Len me — re 4 = —— \ > Ae ae ne os MT ue 5 Li se à | | © il a i a ih LEE) (CEE wie Wi. Le | a M = 1"" LE (Il | if | (2 | — CN = = an | LILI be ayy Een, se de l=. aie = a ul ry) i) = =~ | Men EE LR TU 4 il a) Vy LE i i (tl a] es — EK os fl re — =. — rat = —_ sa PERTE —— Seow — = SS SS SS my"
+numeros_005.jpg,morpho+aucune,19,0.811,1.200,0.000,0.000,0.000,9.63,6,3 | 7? | du | Tha) | x | 4
+numeros_005.jpg,morpho+otsu,19,0.838,1.000,0.000,0.000,0.000,9.07,4,1! | I | je | ou
+numeros_005.jpg,morpho+sauvola,19,0.892,1.000,0.000,0.000,0.000,9.08,3,in | og | 4
+numeros_005.jpg,mser+aucune,16,0.784,1.000,0.250,0.200,0.222,9.07,4,"El | 133 | aie, | Mig"
+numeros_005.jpg,mser+otsu,16,0.595,1.400,0.286,0.400,0.333,9.25,7,"HOTEL ME, | OPOLI | 133 | Œ | 133 | il"
+numeros_005.jpg,mser+sauvola,16,0.811,1.800,0.111,0.200,0.143,8.80,9,83 | ME | OPOLI | NPREMIERTAIRE! 9 | PE | bi | 133 | dir
+numeros_005.jpg,union+aucune,29,0.703,1.600,0.125,0.200,0.154,15.17,8,"3 | du | El | Tha) | 133 | 4 | aie, | Mig"
+numeros_005.jpg,union+otsu,29,0.784,1.200,0.143,0.200,0.167,15.36,7,I | 133 | ou | je | Œ | 133 | il
+numeros_005.jpg,union+sauvola,29,0.838,1.600,0.125,0.200,0.154,18.07,8,E | PE | in | bi | 133 | og | 4 | dir
+numeros_010.jpg,sans_localisation,,74.800,133.000,0.000,0.000,0.000,5.31,133,ae ie Sook 454 i aa i} à ft + bt % #3) | Hi qt iL a + pa i 4 Hae i tt de Ge th 11 re : 11 fl li se He (Be & AE FAR i! ‘4 af 111 ce vi a Hl & i} a fi Hh } sa 4 à is Le LE i ne ny 1 unt teat eee a Ft ty bf he ! au? ae + is A 1 Al À x fl i 1 u Bot pare i 5 i; # i pest baie 4 AL ibe Li HL ii 15 a : Re gt RN 8 Bae ist je i r in 3 ig 4 os ae ia ot re cé at ‘ Æ ce % re coe 4 ey: oe
+numeros_010.jpg,morpho+aucune,8,2.600,3.000,0.000,0.000,0.000,4.50,3,"BBLAMA | 330 | ‘s,s"
+numeros_010.jpg,morpho+otsu,8,1.600,3.000,0.000,0.000,0.000,3.78,3,BE Aids | 30
+numeros_010.jpg,morpho+sauvola,8,2.400,5.000,0.000,0.000,0.000,3.94,5,130 | AB? | 9 à | Æ
+numeros_010.jpg,mser+aucune,4,0.600,1.000,0.500,1.000,0.667,2.25,2,GE | 18830
+numeros_010.jpg,mser+otsu,4,1.600,4.000,0.000,0.000,0.000,2.40,4,"ET A | 1 30,"
+numeros_010.jpg,mser+sauvola,4,1.000,2.000,0.000,0.000,0.000,2.12,2,ES | EF
+numeros_010.jpg,union+aucune,7,2.400,2.000,0.333,1.000,0.500,3.38,3,"BBLAMA | 18830 | ‘s,s"
+numeros_010.jpg,union+otsu,7,2.200,4.000,0.000,0.000,0.000,3.34,4,"BE Aids | 1 30,"
+numeros_010.jpg,union+sauvola,7,1.000,2.000,0.000,0.000,0.000,3.51,2,ES | EF
+panneaux_001.jpg,sans_localisation,,33.455,133.000,0.007,1.000,0.015,3.33,134,"Ce à. x | | nf ÉD Al All iv i it Lit LS i il ë = VAE À ñ ae | = V/s, ef eee \ a ae EN À AS Ca 1G he 14 à BA Us à Pr] 4 B, A ‘a & M 1 aol dl | de |! NS a? ay 1 is zat aly tf FI ml: i at aN Bee, Il gf peewee: Nl ) ie a il | Mh ol 5 A a ig IR il = Va (l Crau] fa Nt il LE i & ‘al > ê il SN a = À | EI TE be 1 pl | ~ i aa F fl be rT wie if = a souterrains Ki = I"" — =| j = = = <= | ="
+panneaux_001.jpg,morpho+aucune,18,0.818,3.000,0.250,1.000,0.400,7.38,4,[Al | 4 | Souterrains | ip
+panneaux_001.jpg,morpho+otsu,18,0.000,0.000,1.000,1.000,1.000,7.06,1,Souterrains
+panneaux_001.jpg,morpho+sauvola,18,0.818,3.000,0.250,1.000,0.400,6.73,4,7 | FUN | id | Souterrains
+panneaux_001.jpg,mser+aucune,20,0.545,3.000,0.250,1.000,0.400,8.83,4,L | À À | Souterrains
+panneaux_001.jpg,mser+otsu,20,0.636,3.000,0.250,1.000,0.400,12.10,4,ss | À À | Souterrains
+panneaux_001.jpg,mser+sauvola,20,1.364,6.000,0.143,1.000,0.250,9.93,7,Li | À À | de | a. | a | Souterrains
+panneaux_001.jpg,union+aucune,31,1.364,6.000,0.143,1.000,0.250,16.50,7,L | À À | [Al | 4 | Souterrains | ip
+panneaux_001.jpg,union+otsu,31,0.636,3.000,0.250,1.000,0.400,16.37,4,ss | À À | Souterrains
+panneaux_001.jpg,union+sauvola,31,2.182,9.000,0.100,1.000,0.182,17.82,10,Li | 7 | de | FUN | À À | id | a. | a | Souterrains
+panneaux_004.jpg,sans_localisation,,6.750,19.500,0.006,0.125,0.012,4.07,157,"oe. su Fe a she Le Tet me & we = = = & ae ji NE SX ag à PA rh Ye Be & as NE % T. oh ae ce HER D Es Fe x = ee aw ‘Sine A9 a ee We Ÿ oy Rx & ae à ey! = Ss sab A ae fe ES as Spek oS # BA = #2 2 Se LS ps se a SSS 2 fk eS 2 ne SS war vf te ey san 1 = + Ls = 1p. ae Ye a 1 fe BS D 7 aS ae se oye = =. ee I ae mn 4 Æ si | E: js ‘ ia = Lif Gg ay pe | aa, LAN = ae se EE = le \ > y = à 7. à es = = q = Se. as ace Se er | ei ee & 2: #5 és oe 5e ashe"
+panneaux_004.jpg,morpho+aucune,40,0.800,0.875,0.143,0.125,0.133,18.59,7,A 119 | 2 | ay | 2 | a LE
+panneaux_004.jpg,morpho+otsu,40,0.867,1.000,0.167,0.125,0.143,19.40,6,19 | 5 | 1 | a 4 | M:
+panneaux_004.jpg,morpho+sauvola,40,0.817,1.000,0.125,0.125,0.125,19.44,8,wt | RE | v. | x 7 | A id | a
+panneaux_004.jpg,mser+aucune,23,0.800,1.000,0.167,0.125,0.143,11.54,6,RES 4 | +5 | Stade | fll | q
+panneaux_004.jpg,mser+otsu,23,0.700,1.000,0.143,0.125,0.133,12.26,7,M | ANNA | pod | Stade y | i | ‘4
+panneaux_004.jpg,mser+sauvola,23,0.650,0.875,0.143,0.125,0.133,10.30,7,xX | Le | 95 | LE | ANNA | pod | Stade
+panneaux_004.jpg,union+aucune,56,0.850,1.375,0.083,0.125,0.100,27.81,12,RES 4 | A 119 | +5 | 2 | ay | 2 | fll | a LE | q
+panneaux_004.jpg,union+otsu,56,0.817,1.125,0.111,0.125,0.118,28.78,9,M | 19 | 5 | i | 1 | ‘4 | a 4 | M:
+panneaux_004.jpg,union+sauvola,56,0.767,1.500,0.083,0.125,0.100,29.61,12,wt | xX | Le | 95 | LE | RE | v. | x 7 | A id | a
+panneaux_006.jpg,sans_localisation,,0.910,2.261,0.121,0.304,0.173,5.67,58,"ID2209 EUR = 093 ANDAN pRUGHEAS jaa) fil) : : ti Fi at 17 —— Ix | | £ Ie xy ae APAMP i | 5 INTERDICTION PL a NN aE 7] *] el A |) Lune En rod eh. ae Lh i, id EU TS ia 3,5T soe as SAUF LIVRAISON ROLES eH ENTS VE Se we"
+panneaux_006.jpg,morpho+aucune,18,0.557,0.739,0.500,0.348,0.410,7.88,16,D2209 | U J | (FE 719 | AUTRES DIRECTIONS | (GANNAT | BELLERIVE-CENTRE | D | Ix | INTERDICTION PL | ia | SAUF | Ts
+panneaux_006.jpg,morpho+otsu,18,0.641,0.739,0.538,0.304,0.389,7.65,13,D2209| | fr] À 719 | AUTRES DIRECTIONS | GANNAT | GS) | 09 | INTERDICTION PL | SAUF LIVR
+panneaux_006.jpg,morpho+sauvola,18,0.581,0.696,0.583,0.304,0.400,11.40,12,"D2209| | A719 | AUTRES DIRECTIONS | GANNAT | Gs) | pos | INTERDICTION PL | 3,5T | SAUF LIVR"
+panneaux_006.jpg,mser+aucune,13,0.527,0.696,0.571,0.348,0.432,5.92,14,"D2209 | nr) À 719 | AUTRES DIRECTIONS | GANNAT | BELLERIVE-cENTRE | LES) | RDICTION PL | 3,5T | ROLES | ENTS"
+panneaux_006.jpg,mser+otsu,13,0.539,0.739,0.500,0.304,0.378,5.89,14,"D2209 | it À 719 | AUTRES DIRECTIONS | GANNAT | BELLERIVE:-CENTRE | pos | RDICTION PL | 3,5T | RÔLES | ENTS"
+panneaux_006.jpg,mser+sauvola,13,0.521,0.652,0.571,0.348,0.432,6.42,14,"D2209 | À 719 | AUTRES DIRECTIONS | GANNAT | BELLERIVE-CENTRE | pos | RDICTION PL | 3,5T | RÔLES | ENTS | Ws"
+panneaux_006.jpg,union+aucune,20,0.527,0.739,0.471,0.348,0.400,8.89,17,D2209 | U J | (FE 719 | AUTRES DIRECTIONS | (GANNAT | BELLERIVE-CENTRE | D | INTERDICTION PL | ia | SAUF | ROLES | ENTS | Ts
+panneaux_006.jpg,union+otsu,20,0.581,0.739,0.467,0.304,0.368,8.71,15,D2209| | fr] À 719 | AUTRES DIRECTIONS | GANNAT | GS) | 09 | INTERDICTION PL | SAUF LIVR | RÔLES | ENTS
+panneaux_006.jpg,union+sauvola,20,0.521,0.696,0.500,0.304,0.378,8.66,14,"D2209| | A719 | AUTRES DIRECTIONS | GANNAT | Gs) | pos | INTERDICTION PL | 3,5T | SAUF LIVR | RÔLES | ENTS"
+panneaux_008.jpg,sans_localisation,,0.000,0.000,1.000,1.000,1.000,2.07,2,BELL STREET
+panneaux_008.jpg,morpho+aucune,3,0.000,0.000,1.000,1.000,1.000,1.13,2,BELL | STREET
+panneaux_008.jpg,morpho+otsu,3,0.000,0.000,1.000,1.000,1.000,1.16,2,BELL | STREET
+panneaux_008.jpg,morpho+sauvola,3,0.182,1.000,0.000,0.000,0.000,1.22,2,SELL | SUREET
+panneaux_008.jpg,mser+aucune,14,2.545,3.500,0.222,1.000,0.364,6.07,9,as | BELL STREET | ETES | CT] | CTTI] | ae | ‘oe LE
+panneaux_008.jpg,mser+otsu,14,0.000,0.000,1.000,1.000,1.000,5.99,2,BELL STREET
+panneaux_008.jpg,mser+sauvola,14,0.455,1.000,0.500,1.000,0.667,5.70,4,BELL STREET | En | 1
+panneaux_008.jpg,union+aucune,15,2.545,3.500,0.222,1.000,0.364,6.44,9,as | BELL STREET | ETES | CT] | CTTI] | ae | ‘oe LE
+panneaux_008.jpg,union+otsu,15,0.000,0.000,1.000,1.000,1.000,6.31,2,BELL STREET
+panneaux_008.jpg,union+sauvola,15,0.455,1.000,0.500,1.000,0.667,7.36,4,BELL STREET | En | 1
+panneaux_013.jpg,sans_localisation,,1.025,2.714,0.100,0.286,0.148,3.47,20,"© BR NORTH NORTH ra nn SOU TH é Fe oe N > a ER TE i, © se SNS"
+panneaux_013.jpg,morpho+aucune,15,0.350,0.714,0.400,0.286,0.333,7.32,5,Va | NORTH | NORTE | INTERSTATE | SOU
+panneaux_013.jpg,morpho+otsu,15,0.300,0.857,0.444,0.571,0.500,7.40,9,a | 101 | NORTH | NORT | INTERSTATE | 110 | SOU | 6° | 2
+panneaux_013.jpg,morpho+sauvola,15,0.325,0.857,0.375,0.429,0.400,8.24,8,101 | NORTH | NORT | INTERSTATE | no | SOU | a | ie
+panneaux_013.jpg,mser+aucune,14,0.100,0.143,1.000,0.857,0.923,8.00,6,101 | NORTH | NORTH | INTERSTATE | 110 | SOUTH
+panneaux_013.jpg,mser+otsu,14,0.275,0.429,0.750,0.857,0.800,6.73,8,101 | NORTH | NORTH | INTERSTATE | 110 | SOUTH | “Ma. | a
+panneaux_013.jpg,mser+sauvola,14,0.200,0.286,0.857,0.857,0.857,7.20,7,101 | NORTH | NORTH | INTERSTATE | 110 | SOUTH | 254
+panneaux_013.jpg,union+aucune,22,0.275,0.429,0.800,0.571,0.667,10.94,5,Va | NORTH | NORTH | INTERSTATE | SOUTH
+panneaux_013.jpg,union+otsu,22,0.450,0.857,0.545,0.857,0.667,10.46,11,a | 101 | NORTH | NORTH | INTERSTATE | 110 | SOUTH | “Ma. | a | 6° | 2
+panneaux_013.jpg,union+sauvola,22,0.325,0.571,0.625,0.714,0.667,10.99,8,101 | NORTH | NORTH | INTERSTATE | no | SOUTH | a | 254
+panneaux_014.jpg,sans_localisation,,5.684,10.500,0.000,0.000,0.000,2.64,42,à LL: 2 ” PA = rT yo a. sig | S wy Le aed À D ed = = à 2) D ff ° LL =D \ \ \ we pb Se) SMR SE es tbl <A> Ss oan | Fo”
+panneaux_014.jpg,morpho+aucune,6,0.105,0.250,1.000,0.750,0.857,3.06,3,HOSPITAL | KUNAK | KM
+panneaux_014.jpg,morpho+otsu,6,0.105,0.250,1.000,0.750,0.857,2.90,3,HOSPITAL | KUNAK | KM
+panneaux_014.jpg,morpho+sauvola,6,0.105,0.250,1.000,0.750,0.857,2.93,3,HOSPITAL | KUNAK | KM
+panneaux_014.jpg,mser+aucune,3,0.000,0.000,1.000,1.000,1.000,1.70,4,HOSPITAL | KUNAK | 5 KM
+panneaux_014.jpg,mser+otsu,3,0.000,0.000,1.000,1.000,1.000,1.58,4,HOSPITAL | KUNAK | 5 KM
+panneaux_014.jpg,mser+sauvola,3,0.000,0.000,1.000,1.000,1.000,1.74,4,HOSPITAL | KUNAK | 5 KM
+panneaux_014.jpg,union+aucune,6,0.000,0.000,1.000,1.000,1.000,3.11,4,HOSPITAL | KUNAK | 5 KM
+panneaux_014.jpg,union+otsu,6,0.000,0.000,1.000,1.000,1.000,2.93,4,HOSPITAL | KUNAK | 5 KM
+panneaux_014.jpg,union+sauvola,6,0.000,0.000,1.000,1.000,1.000,2.97,4,HOSPITAL | KUNAK | 5 KM
+panneaux_021.jpg,sans_localisation,,163.500,116.000,0.000,0.000,0.000,3.25,116,"i ey de VV, | #74 a V2 a os me Ne ey SEB VS 7 ie Le i «a Ce: > Ie ls i < oy 3 EN ST BS, AH 4) à ae Auk À te > Ge a À 4 Par set ie i ext ah | ay ag iN Age af 2 de Rh Su oe AY i ye oN NN wae y Sy ii i a 4 te | AS Mes ee dl € di fl a His Dar D me ns 2 ui ST, No DES à ES x i fi ay Wy ry 2 ca ig i 2 Si ig C4 ne age ay y 38 AN ay NT"
+panneaux_021.jpg,morpho+aucune,19,7.000,5.000,0.000,0.000,0.000,9.58,5,D | à: | nal | de | ay
+panneaux_021.jpg,morpho+otsu,19,2.000,2.000,0.333,1.000,0.500,8.52,3,35 | f | w
+panneaux_021.jpg,morpho+sauvola,19,0.000,0.000,1.000,1.000,1.000,8.41,1,35
+panneaux_021.jpg,mser+aucune,90,12.000,9.000,0.100,1.000,0.182,46.95,10,"35 | À | L | A | Le | a | Ÿ | KE | AY. | an,"
+panneaux_021.jpg,mser+otsu,90,13.500,10.000,0.091,1.000,0.167,48.89,11,35 | A | yt | à ys | a | gi | 4 | 4° | EN | Put
+panneaux_021.jpg,mser+sauvola,90,7.000,6.000,0.143,1.000,0.250,42.51,7,35 | 3 | à | æ | RE | ye | 9
+panneaux_021.jpg,union+aucune,101,16.500,12.000,0.077,1.000,0.143,55.21,13,"35 | À | L | A | à: | Le | a | Ÿ | KE | de | AY. | an, | ay"
+panneaux_021.jpg,union+otsu,101,13.500,10.000,0.091,1.000,0.167,53.64,11,35 | A | yt | à ys | a | gi | 4 | 4° | EN | Put
+panneaux_021.jpg,union+sauvola,101,7.000,6.000,0.143,1.000,0.250,51.71,7,35 | 3 | à | æ | RE | ye | 9
+plaques_003.jpg,sans_localisation,,5.440,11.312,0.027,0.312,0.050,6.53,186,"—— ae nn, # ces FE = tee Porte, IT BI ry, me ay 4 Zo NT eee = a) | = & wed DEAR nn. (kp cS EE FE ce A A Lj te fa F ss ne <a Fe s3 ab ete 4 | es — ie Sa eT See i ERB ar dr à a TUE nn 2 IT En LL ee Le Éd aS San AY I 1 as as ASS. = PPS <> Bee 4} ? re à ZEN 7 % [ ais SCAN A = — il oe == eee en ee oer tte a i 2e ie ee =z =e mcm me es _—_ ot ae gi Sa ag ci ae SSE are a ae ee ft er es = ae ae oa << Le CC Le ES sae = me Ye “à | hs ie Bes AQU FR 185 ie at TIEY A (| R Ta) ERA — IRE DE = mp COMEDIE FR 4 Fr / ne u | | & _1858 - 1946 @ _— = | = == = ES = eee ss ppt A"
+plaques_003.jpg,morpho+aucune,39,0.297,0.812,0.312,0.312,0.312,16.72,16,"PEN | 7 | pa | on | moe, | NA@U | NVIER 185 | RAPHAEL DUFLOS | SOCIETAIRE DI | COMEDIE FRANÇAISE | 1838 1946"
+plaques_003.jpg,morpho+otsu,39,0.418,0.812,0.267,0.250,0.258,18.96,15,TT | 2 | LE: | 4 | ICI NAQU | NVIFR 185 | DUFLO | SOCTETA'RE D: | COMED'E FRANCAISE | 1858 1946
+plaques_003.jpg,morpho+sauvola,39,0.714,0.938,0.182,0.125,0.148,17.59,11,x | wk | LA | aA | x | 2° | o | TRE | COVEDE | 1858 923
+plaques_003.jpg,mser+aucune,19,0.495,0.938,0.067,0.062,0.065,14.98,15,Am | VI | R 185 | RAP! | DU | SOCIETA | RE D | EDIE FRAN | [SE | al | 18568 | 1946
+plaques_003.jpg,mser+otsu,19,0.462,0.875,0.143,0.125,0.133,12.65,14,Da | VI | R 185 | RAP | DU | SOC'ETA | RE D | EDIE FRAN | SE | 1858 | 1946
+plaques_003.jpg,mser+sauvola,19,0.769,0.875,0.222,0.125,0.160,9.18,9,a | a | 2 | De | SOC | EDS | S= | 1858 | LES
+plaques_003.jpg,union+aucune,43,0.297,0.875,0.278,0.312,0.294,23.93,18,"PEN | 7 | Am | pa | on | moe, | NA@U | NVIER 185 | RAPHAEL DUFLOS | SOCIETAIRE DI | al | COMEDIE FRANÇAISE | 1838 1946"
+plaques_003.jpg,union+otsu,43,0.429,0.875,0.250,0.250,0.250,20.85,16,TT | 2 | LE: | Da | 4 | ICI NAQU | NVIFR 185 | DUFLO | SOCTETA'RE D: | COMED'E FRANCAISE | 1858 1946
+plaques_003.jpg,union+sauvola,43,0.692,0.938,0.154,0.125,0.138,23.98,13,x | wk | LA | aA | a | x | 2° | a | o | TRE | COVEDE | 1858 923
+plaques_004.jpg,sans_localisation,,0.684,1.125,0.400,0.750,0.522,3.66,15,">, | RUE ré af? | MÈRE TERESA (1910 - 1997) LL | Cc ws)"
+plaques_004.jpg,morpho+aucune,10,0.421,0.625,0.571,0.500,0.533,6.79,7,17° | oi | RUE | MÈRE | (1910 1997) | 1
+plaques_004.jpg,morpho+otsu,10,0.368,0.500,0.667,0.500,0.571,5.46,6,17° | RUE | MÈRE | ii | (1910 1997)
+plaques_004.jpg,morpho+sauvola,10,0.579,0.750,0.500,0.500,0.500,4.54,8,"J] | 17° | RUE | MÈRE | (1910 1997) | le, | 1"
+plaques_004.jpg,mser+aucune,8,0.132,0.500,0.571,0.500,0.533,4.69,7,17° Arr! | RUE | MÈRE TERESA. | (1910 | 1997)
+plaques_004.jpg,mser+otsu,8,0.211,0.625,0.556,0.625,0.588,5.50,9,17° Arr | RUE | MÈRE TERESA | (1910 | 1997) | D | 2
+plaques_004.jpg,mser+sauvola,8,0.263,0.625,0.556,0.625,0.588,4.06,9,17° Arr | RUE | MÈRE TERESA | y | (1910 | 1997) | aoe
+plaques_004.jpg,union+aucune,11,0.211,0.625,0.500,0.500,0.500,5.52,8,17° Arr! | oi | RUE | MÈRE TERESA. | (1910 1997)
+plaques_004.jpg,union+otsu,11,0.263,0.750,0.500,0.625,0.556,5.97,10,17° Arr | RUE | MÈRE TERESA | i | (1910 1997) | D | 2
+plaques_004.jpg,union+sauvola,11,0.447,0.875,0.455,0.625,0.526,5.72,11,"J] | 17° Arr | RUE | MÈRE TERESA | y | (1910 1997) | le, | aoe"
+plaques_005.jpg,sans_localisation,,4.000,9.000,0.027,0.250,0.049,3.97,37,AS ESS ‘ie: eg Ÿ EN e a me ARR eu Ss = = LA & ES SS sr ASSET == qe = ny VS = ee i BEAUBOURG {i Sek fi cx SS KE Ye =
+plaques_005.jpg,morpho+aucune,13,0.458,0.750,0.500,0.250,0.333,9.35,2,Mea | BEAUBOURG
+plaques_005.jpg,morpho+otsu,13,0.375,0.750,0.250,0.250,0.250,7.49,4,me | BR | À | BEAUBOURG
+plaques_005.jpg,morpho+sauvola,13,0.542,1.000,0.250,0.250,0.250,6.78,4,me | BR | BEAUBOURG | 2°
+plaques_005.jpg,mser+aucune,11,0.375,1.000,0.333,0.500,0.400,6.45,6,"me | 3"" ARR! | RUE | BEAUBOURG | o"
+plaques_005.jpg,mser+otsu,11,0.375,0.750,0.400,0.500,0.444,6.96,5,"3"" ARR | RUE | BEAUBOURG | MES"
+plaques_005.jpg,mser+sauvola,11,0.333,0.750,0.400,0.500,0.444,7.83,5,"Shy | 3"" ARR | RUE | BEAUBOURG"
+plaques_005.jpg,union+aucune,18,0.417,1.000,0.333,0.500,0.400,10.75,6,"Mea | 3"" ARR! | RUE | BEAUBOURG | o"
+plaques_005.jpg,union+otsu,18,0.417,1.250,0.286,0.500,0.364,11.96,7,"me | 3"" ARR | BR | À | RUE | BEAUBOURG"
+plaques_005.jpg,union+sauvola,18,0.625,1.500,0.250,0.500,0.333,11.27,8,"me | 3"" ARR | BR | Shy | RUE | BEAUBOURG | 2°"
+plaques_008.jpg,sans_localisation,,12.071,26.400,0.008,0.200,0.014,4.28,133,"RE se Ÿ = % = — sf —— a = —— LA 7 (à | Hae) es = © = = a: Fa ÿ e | % mn rer 7A \ \ = ry ge © a . © 4 at a. SS = aoe = a ae at Fe PE = i] I] | D ++ ee < yi A 24 5, ee = DEA 15 [et Ig bl nak de es a Me ESS By a 1 fe 0 Ly L 4 4 TRE Le : ZB Gea i = # a ie eS es ARE oe & i ay aS a4 A Se se === ee = ue oe re ae ee = & és Æ, = see 7 ne 2 = = =; À. Pe rigs fer ye"
+plaques_008.jpg,morpho+aucune,32,0.643,1.400,0.250,0.400,0.308,14.76,8,er | 12 | (3 Cc | RUE | COURCELLES | 2 | PE
+plaques_008.jpg,morpho+otsu,32,0.786,1.000,0.400,0.400,0.400,15.66,5,RUE | COURCELLES | oe | as | a
+plaques_008.jpg,morpho+sauvola,32,0.786,1.400,0.286,0.400,0.333,14.65,7,4. | RUE | COURCELLES | 7. we I | e
+plaques_008.jpg,mser+aucune,8,0.321,0.600,0.500,0.400,0.444,4.18,4,S™ ARR | RUE | COURCELLES
+plaques_008.jpg,mser+otsu,8,0.464,0.600,0.667,0.400,0.500,4.28,3,RUE | À | COURCELLES
+plaques_008.jpg,mser+sauvola,8,0.429,0.600,0.667,0.400,0.500,4.21,3,a | RUE | COURCELLES
+plaques_008.jpg,union+aucune,36,0.643,1.400,0.250,0.400,0.308,17.39,8,er | 12 | (3 Cc | RUE | COURCELLES | 2 | PE
+plaques_008.jpg,union+otsu,36,0.750,1.200,0.333,0.400,0.364,17.17,6,RUE | À | COURCELLES | oe | as | a
+plaques_008.jpg,union+sauvola,36,0.714,1.400,0.250,0.400,0.308,17.73,8,4. | a | RUE | COURCELLES | 7. we I | e
+plaques_009.jpg,sans_localisation,,9.609,18.250,0.000,0.000,0.000,4.27,73,"De (SED, SVT À Fi Y pe je TE sae =e Seno gb xy Can wey à” Le of ae Re ee ie a Ce. RE i f ee. vi aw ee Ai ans = eee pe OF; ra ee se > 4 Fe B Sir AT. a + De er mdr nnoemetnte eee J ‘É LE sala sash cence ¢ Ce g ey ae Le Fe PT ie et Es 7 Ps"
+plaques_009.jpg,morpho+aucune,14,0.826,1.500,0.000,0.000,0.000,6.29,6,AU | fe. | y | iY | MESM | 27:
+plaques_009.jpg,morpho+otsu,14,0.609,1.000,0.000,0.000,0.000,6.19,3,me | 13. | MESM
+plaques_009.jpg,morpho+sauvola,14,0.609,1.500,0.000,0.000,0.000,6.96,6,"me | 13 | D | 4, | MESM | e"
+plaques_009.jpg,mser+aucune,49,0.565,1.250,0.286,0.500,0.364,24.85,7,"7 | bay | me, | ef | tg. | RUE | DAMESME"
+plaques_009.jpg,mser+otsu,49,1.087,2.750,0.154,0.500,0.235,25.38,13,à | jot | Soo | «5. | e | ow | me | 4 | 4 | 3 | te | RUE | DAMESME
+plaques_009.jpg,mser+sauvola,49,1.261,3.250,0.133,0.500,0.211,22.34,15,à | a) | Fa | e- 2 | me | 4 | TS | A7 | 5 | À | th | vat | RUE | DAMESME
+plaques_009.jpg,union+aucune,57,1.043,2.250,0.182,0.500,0.267,24.16,11,7 | bay | AU | 4 | ef | tg. | fe. | RUE | y | DAMESME | 27:
+plaques_009.jpg,union+otsu,57,1.174,3.000,0.143,0.500,0.222,24.78,14,à | jot | Soo | «5. | e | ow | me | 4 | va | 3 | 4 | te | RUE | DAMESME
+plaques_009.jpg,union+sauvola,57,1.565,4.000,0.111,0.500,0.182,24.25,18,"à | a) | Fa | e- 2 | me | 4 | TS | 5 | A7 | À | th | vat | D | RUE | 4, | DAMESME | e"
+plaques_013.jpg,sans_localisation,,50.333,74.500,0.011,0.833,0.022,12.50,451,"ETS ow, pa ee a V AS ra tr ay A Re Se mt Kel Ve CES a? = 4 ies ux er YS oN eee af Rest ie we EN J a : Ke ae Ad ts pa DE as Le TN oe = ee sas, <2 Cs. Le Er [= oe =~ J On bey & vue 7> Ee fi aN a Sr ¥ =e a Sips ia Dy oe We > ELA KR es x tes am DES fia Hi os a | fs a. 7 (oi SEX AT D PE KE \ ree LE Cv ARR 9 “à we ab ( Fax >. À J cS Cr ~ ape wae \3 1 SK TR al ne Pad = y qu € = re [1 A ai £ wy @ Se lé ss ‘ @ ie eo a a Jt sate SS. JR + à it x) Et Cu “a =o s —"" ie Es = sei aw Re = =e Te pes LD 4 FA =H =e eT Es ee in ae Fe ae VE Faso Fr is ex ger ee 8, ph et ab 2) ES at Rat Ra ey 7 Fe ak ers @: Ch apr I 3h yt 4 à UE Ss a a eR rane =e ake aN De ‘at De + ie rae ee fre =>, sk 95 mac Bi FX Mesioee os fines + mee Sas AE Ce & à AS Ai FC. a lig. sone. fe fz] rs A Pay à. t Jax: 7, 14 <i = = — Ga LA a À HET Ka ees By fi a, bate ee Je LE Be ee Res jee (a RUE HY el et ahs ai 4 er tp =x) | ey Bien FER ge al ‘> x 5 ps 7 SE I: Is FA] À) Al: iB | i ray DER y ES ke Re Pee ré a vai a Bee i LP 4h it Ie fs SE we k ae Ey 3 5 » LT oo Bee BS ae AB as J Se Ve ze 154 74 be: ee Sass mes Lu) = MEUNIERS =: au RS a 14 ny haat Fa Le =. ee. a oe fe dr TA 3 Die. (ES EC “À ro 3] 1 ik EX 5 s BTE Be = PES] ZT RE EERE See maire ES LES ets, LAND FL ie PE 5 Beer Si te yg i at 2s te SR el 54 Se isp ee SELS or ER nee A el a Gore tf GENS A ie SA a} ss Aer RER na DE oe sb RES a fu ee Dm - Æ a oe nn na 5 en = re >"
+plaques_013.jpg,morpho+aucune,17,0.667,1.167,0.000,0.000,0.000,6.77,7,19: | ie | AY | y | El | UN | EI
+plaques_013.jpg,morpho+otsu,17,0.741,1.000,0.000,0.000,0.000,6.44,6,r | 3 | 19 | me | “ARR. | re
+plaques_013.jpg,morpho+sauvola,17,0.741,1.000,0.200,0.167,0.182,6.47,5,19 | me | Ke | we | t
+plaques_013.jpg,mser+aucune,6,0.407,0.500,1.000,0.500,0.667,3.08,3,RUE | DES | MEUNIERS
+plaques_013.jpg,mser+otsu,6,0.407,0.500,1.000,0.500,0.667,3.20,3,RUE | DES | MEUNIERS
+plaques_013.jpg,mser+sauvola,6,0.407,0.500,1.000,0.500,0.667,3.16,3,RUE | DES | MEUNIERS
+plaques_013.jpg,union+aucune,14,0.259,0.500,0.600,0.500,0.545,6.18,5,ie | AY | RUE | DES | MEUNIERS
+plaques_013.jpg,union+otsu,14,0.407,0.667,0.500,0.500,0.500,6.13,6,r | 3 | RUE | DES | MEUNIERS | re
+plaques_013.jpg,union+sauvola,14,0.296,0.500,0.600,0.500,0.545,6.25,5,Ke | we | RUE | DES | MEUNIERS
+plaques_014.jpg,sans_localisation,,17.684,23.600,0.008,0.200,0.016,4.35,119,"sp” es ad ee EE Dr les ES ne Beas Be NO mur TRES GE pt eb Ng, PAR un ss x Va Hs, BS Es S ee —o =) See oa te, ER NÉ, Ws #4 LAN me Ta bal da ae a es an a = ni Nas ay ; A as os eS iat Ca Ne 4 Fr aie S33 Ex 7 ws & a ms a \y an mF Ces ET SE = ae LITE ET f., <a n À 1 37: à \. à ES RUE 7 Py EE ECKER Sa 2e = tt = ( a dE, rv ae nt À (+ ty D Hs a — ~ di 2 à - Wy"
+plaques_014.jpg,morpho+aucune,25,0.842,1.000,0.000,0.000,0.000,11.56,3,"a | ""1 | LA"
+plaques_014.jpg,morpho+otsu,25,0.789,1.000,0.000,0.000,0.000,10.04,3,a | ù e
+plaques_014.jpg,morpho+sauvola,25,0.737,1.200,0.000,0.000,0.000,9.75,6,am | eo | tae | æ | Be | 9
+plaques_014.jpg,mser+aucune,29,0.474,0.800,0.400,0.400,0.400,12.02,5,"""a | one | RUE | NECKER | 1"
+plaques_014.jpg,mser+otsu,29,0.368,0.600,0.400,0.400,0.400,11.18,5,es | 2 | Fr | RUE | NECKER
+plaques_014.jpg,mser+sauvola,29,0.526,0.800,0.333,0.400,0.364,12.83,6,ay | Fat | Fr | RUE | NECKER | C2
+plaques_014.jpg,union+aucune,51,0.737,1.200,0.250,0.400,0.308,21.49,8,"a | ""a | one | ""1 | RUE | NECKER | LA | 1"
+plaques_014.jpg,union+otsu,51,0.526,1.200,0.250,0.400,0.308,20.96,8,a | es | ù e | 2 | Fr | RUE | NECKER
+plaques_014.jpg,union+sauvola,51,1.263,2.000,0.167,0.400,0.235,20.36,12,am | ay | Fat | eo | tae | æ | Be | Fr | 9 | RUE | NECKER | C2
+plaques_015.jpg,sans_localisation,,0.500,1.167,0.300,0.500,0.375,2.79,10,© 2 Arr: C 2 RUE DE PALESTRO Oo ©
+plaques_015.jpg,morpho+aucune,16,0.708,1.000,0.000,0.000,0.000,7.70,2,PAL | -ESTRO
+plaques_015.jpg,morpho+otsu,16,0.583,1.333,0.000,0.000,0.000,6.87,8,a | foe os | Arr: | O | D | PAL | ESTRO
+plaques_015.jpg,morpho+sauvola,16,0.458,1.000,0.000,0.000,0.000,6.58,6,woe | 7 | Arr: | D | PAL | ESTRO
+plaques_015.jpg,mser+aucune,4,0.292,0.667,0.500,0.333,0.400,2.03,4,2° Ar | RUE | PALESTRO
+plaques_015.jpg,mser+otsu,4,0.333,0.667,0.500,0.333,0.400,1.99,4,2°A | rri | RUE | PALESTRO
+plaques_015.jpg,mser+sauvola,4,0.292,0.667,0.500,0.333,0.400,2.02,4,2A | rri | RUE | PALESTRO
+plaques_015.jpg,union+aucune,16,0.292,0.667,0.500,0.333,0.400,6.65,4,2° Ar | RUE | PALESTRO
+plaques_015.jpg,union+otsu,16,0.667,1.167,0.250,0.333,0.286,6.69,8,a | foe os | 2°A | Arr: | O | RUE | PALESTRO
+plaques_015.jpg,union+sauvola,16,0.500,0.833,0.333,0.333,0.333,7.14,6,woe | 7 | 2A | Arr: | RUE | PALESTRO
+plaques_016.jpg,sans_localisation,,21.800,40.000,0.000,0.000,0.000,3.56,120,"me gee 2% 44 + à < PAL = 27"" 4. ee :e.c LT .# ""+ ew + a ui &« nS om whe 5 .e° eo” 4 iar “ron TH eat fe * tant le > » » LE ae a ®e DL »* 3 D : 24, ve À XL -, à] mL OUN KE e° AON > 7? te Pr “1 > 4 Sa 2> - d LUS Tn » Dis + >. Joa ae “ea? at vd + à Le 2 dg %% L M” .Ÿ LL ¢ «| af = \ a VOR € 2 ed %.” 4 #% 4 ! ea é 3 ae be | + n'a I. a vs || Yi ~"
+plaques_016.jpg,morpho+aucune,33,0.733,1.333,0.000,0.000,0.000,12.56,4,E | Lo | LL” | at
+plaques_016.jpg,morpho+otsu,33,1.467,3.000,0.000,0.000,0.000,41.79,9,P | a | L | e | A rt | pd. dad. | wearr.-
+plaques_016.jpg,morpho+sauvola,33,1.267,3.333,0.000,0.000,0.000,20.25,10,"D | f | a | e | oi | a | i, | C4 | x | À"
+plaques_016.jpg,mser+aucune,28,1.333,3.000,0.000,0.000,0.000,14.12,9,CA | 2 | we | t« | LOUNRE | À | #5 | at | ze
+plaques_016.jpg,mser+otsu,28,0.933,2.333,0.000,0.000,0.000,13.02,7,oF | a | te | ae | at | “a | mre
+plaques_016.jpg,mser+sauvola,28,1.200,2.667,0.000,0.000,0.000,13.53,8,"hs | 4 | [LE | ow, | à | fr | a | me"
+plaques_016.jpg,union+aucune,51,1.800,3.667,0.000,0.000,0.000,23.78,11,CA | E | we | t« | LOUNRE | Lo | LL” | #5 | À | ze | at
+plaques_016.jpg,union+otsu,51,2.200,4.000,0.000,0.000,0.000,27.93,12,oF | P | a | L | e | pd. dad. | wearr.- | ae | te | “a | mre
+plaques_016.jpg,union+sauvola,51,2.067,5.000,0.000,0.000,0.000,29.31,15,"D | hs | f | a | 4 | [LE | e | a | ow, | à | fr | C4 | me | x | À"
+plaques_017.jpg,sans_localisation,,16.522,36.500,0.000,0.000,0.000,5.27,146,"DU CS WS} À VE RON à À DEP \ (4 À hs De \ Me 14 4, 4 ey va 4 Non & IN \¢ N «(ll | 4 OP’ i iA a \ fi ait 1 « ne \] Ke D oh °! le | à pod NY i ss a N EX ~ dep A el we (l ai A 7, d 1 M #0 gi: Zi sùl jel eu ere b co le a YA em EF d' AG oj (1 A a dl {A D — À à 4à ey | i noe Pp EEE as i | i ll }l fl ] 2 a i} ih | x 15 = pe R a i i an DES i a y | Ss = Ge 3 wed a ji: Fo th =. Ne [4 LA 7e / VE v Pa Pertes"
+plaques_017.jpg,morpho+aucune,57,1.304,3.250,0.000,0.000,0.000,28.19,13,"IVR | 61, 78 | L ""4 | x | VA) | AR | i | 4 | Il | LT | TM"
+plaques_017.jpg,morpho+otsu,57,1.087,3.000,0.000,0.000,0.000,33.87,12,4 | 1 | n 178 | JL | ux | i | a | ln | o | Ww | ai
+plaques_017.jpg,morpho+sauvola,57,1.348,3.250,0.000,0.000,0.000,29.87,13,0 | 7 | gore | v¢ | 4 1 78- | Ge | ux | 4 | or | ra | ah
+plaques_017.jpg,mser+aucune,42,1.130,2.500,0.091,0.250,0.133,21.49,11,"A | AA | Là | 4 | C\PA | int), | Paris | jeux | d'A | cole | in"
+plaques_017.jpg,mser+otsu,42,1.739,4.250,0.000,0.000,0.000,17.28,17,"ty | 4 | A | “4 | A | ra | fi | iv, | af | Xx | d'A | rcole | A | LT | ae | LE | Lun."
+plaques_017.jpg,mser+sauvola,42,0.957,2.500,0.000,0.000,0.000,16.45,10,ad | al | A | at | cart | 57 | in UE | f | ù
+plaques_017.jpg,union+aucune,75,2.304,4.750,0.050,0.250,0.083,29.25,20,"A | Là | 4 | C\PA | IVR | int), | Paris | 61, 78 | L ""4 | jeux | VA) | AR | i | d'A | cole | in | LT | TM"
+plaques_017.jpg,union+otsu,75,2.478,6.000,0.000,0.000,0.000,27.25,24,"ty | 4 | A | 4 | A | 1 | fi | iv, | af | JL | n 178 | Xx | i | d'A | rcole | A | o | LT | ae | LE | Ww | Lun. | ai"
+plaques_017.jpg,union+sauvola,75,1.826,4.500,0.000,0.000,0.000,26.60,18,ad | al | 0 | A | 7 | at | gore | v¢ | cart | 4 1 78- | Ge | 4 | or | in UE | f
+plaques_018.jpg,sans_localisation,,0.880,2.667,0.000,0.000,0.000,2.28,8,Fe r4 \ bee ~~ * h A
+plaques_018.jpg,morpho+aucune,4,0.560,0.667,0.333,0.333,0.333,2.16,3,AVENUE | Ides | Ka
+plaques_018.jpg,morpho+otsu,4,0.040,0.333,0.667,0.667,0.667,1.62,3,AVENUE | des | CHAMPS-ELVSEES
+plaques_018.jpg,morpho+sauvola,4,0.600,0.333,1.000,0.667,0.800,2.08,2,AVENUE | des
+plaques_018.jpg,mser+aucune,2,0.200,0.667,0.500,0.333,0.400,1.14,2,AVENUE | CHAMPS-ELYSEES|
+plaques_018.jpg,mser+otsu,2,0.000,0.000,1.000,1.000,1.000,1.16,3,AVENUE | des CHAMPS-ELYSEES
+plaques_018.jpg,mser+sauvola,2,0.000,0.000,1.000,1.000,1.000,1.21,3,AVENUE | des CHAMPS-ELYSEES
+plaques_018.jpg,union+aucune,3,0.320,0.667,0.333,0.333,0.333,1.50,3,AVENUE | CHAMPS-ELYSEES| | Ka
+plaques_018.jpg,union+otsu,3,0.000,0.000,1.000,1.000,1.000,1.51,3,AVENUE | des CHAMPS-ELYSEES
+plaques_018.jpg,union+sauvola,3,0.000,0.000,1.000,1.000,1.000,1.60,3,AVENUE | des CHAMPS-ELYSEES
+plaques_019.jpg,sans_localisation,,0.528,1.400,0.235,0.400,0.296,2.13,17,"< A. A @ © 13e At RUE EREN ICE ABBOT, (©) 1898 . 4 PHOTOGRAPHE 2)"
+plaques_019.jpg,morpho+aucune,7,0.906,0.900,0.500,0.100,0.167,2.20,2,A | RUE
+plaques_019.jpg,morpho+otsu,7,0.717,0.900,0.333,0.100,0.154,2.12,3,RUE | (ey | PHOTOGRAp
+plaques_019.jpg,morpho+sauvola,7,0.906,0.900,0.333,0.100,0.154,2.25,3,à 1 | RUE
+plaques_019.jpg,mser+aucune,4,0.906,0.900,0.500,0.100,0.167,1.56,2,A | RUE
+plaques_019.jpg,mser+otsu,4,0.792,0.900,0.167,0.100,0.125,1.53,6,3 | Be At | RUE | A a
+plaques_019.jpg,mser+sauvola,4,0.830,0.900,0.250,0.100,0.143,1.56,4,Be An | RUE | iw
+plaques_019.jpg,union+aucune,10,0.887,0.900,0.333,0.100,0.154,3.54,3,A | A | RUE
+plaques_019.jpg,union+otsu,10,0.679,0.900,0.125,0.100,0.111,3.47,8,3 | Be At | RUE | (ey | PHOTOGRAp | A a
+plaques_019.jpg,union+sauvola,10,0.849,1.000,0.167,0.100,0.125,3.59,6,à 1 | Be An | RUE | iw
+plaques_020.jpg,sans_localisation,,1.505,3.105,0.203,0.789,0.323,3.55,74,"TD SS — — + Nes HES LR, — = = (See Sey = —| \ \ wv \ 2) | a ————— — Al = = —— == SR — SS ER ne ye Ate Aa il 9° Arr: BOULEVARD HAUSSMANN ere ee A 4 G @ 9° Arr: a (c) _— © | BOULEVARD = HAUSSMANN PREFET DE LA SEINE DE 1853 A 1870 (1809 - 1891) ©) © 2 ——— ‘J"
+plaques_020.jpg,morpho+aucune,10,0.417,0.737,0.556,0.263,0.357,3.33,9,Arr’ | BOULEVARD | HAUSSMANN | 9° Arr: | BOULEVARD | HAUSSMANN | {1809 1891)
+plaques_020.jpg,morpho+otsu,10,0.437,0.737,0.556,0.263,0.357,2.97,9,9° | BOULEVARD | HAUSSMANN | 9° Arr! | BOULEVARD | HAUSSMANN | {1809 1891)
+plaques_020.jpg,morpho+sauvola,10,0.388,0.737,0.500,0.263,0.345,3.55,10,9° Arrt_ | BOULEVARD | HAUSSMANN | 9° Arr: | BOULEVARD | HAUSSMANN | 11809 1891)
+plaques_020.jpg,mser+aucune,6,0.524,0.789,0.625,0.263,0.370,2.56,8,9° A | BOULEVARD | HAUSSMANN | 9° Arr: | BOULEVARD | HAUSSMANN
+plaques_020.jpg,mser+otsu,6,0.524,0.789,0.625,0.263,0.370,1.89,8,9° A | BOULEVARD | HAUSSMANN | 9° Arr: | BOULEVARD | HAUSSMANN
+plaques_020.jpg,mser+sauvola,6,0.524,0.789,0.625,0.263,0.370,2.92,8,9° A | BOULEVARD | HAUSSMANN | 9° Arr: | BOULEVARD | HAUSSMANN
+plaques_020.jpg,union+aucune,10,0.417,0.737,0.556,0.263,0.357,5.11,9,Arr’ | BOULEVARD | HAUSSMANN | 9° Arr: | BOULEVARD | HAUSSMANN | {1809 1891)
+plaques_020.jpg,union+otsu,10,0.437,0.737,0.556,0.263,0.357,5.39,9,9° | BOULEVARD | HAUSSMANN | 9° Arr: | BOULEVARD | HAUSSMANN | {1809 1891)
+plaques_020.jpg,union+sauvola,10,0.388,0.737,0.500,0.263,0.345,4.04,10,9° Arrt_ | BOULEVARD | HAUSSMANN | 9° Arr: | BOULEVARD | HAUSSMANN | 11809 1891)
+plaques_021.jpg,sans_localisation,,65.125,179.000,0.000,0.000,0.000,5.66,179,"“€ + ee ‘ye SR we ¥ “9° ny ka (7 CPC at > are À Pw > % ° A TE Ol CES en f 9. 4"" &”"" © Fr fae ~ a ee sv cea fie a Rid 4: Fe # au Ae ae ÿ té LS #4 WE Os. ew te 72 ae b L 2 Xe ‘ote, ts oe ak 2 y ne © we oe 8, etd Lee ust %e 8 41% “a aye os ri io MAT we 2 Ca ÉQ tas Ya és de a we LS = + on ND + di +. 44, + LT > i Je ae Rie , ex a $ AD em i, w. ae Le ke 4 DM pw? ré om Ap * LE vt RES £. re. + gee be +: ve + we [#4 ro “5 A Ei ve ‘so * ea a 7 & 36 3%. ie ne San eng Ca <P. LEA as Ph, ae “ ay + EL at cae “a on | de. gy. J eV fe LE ie"
+plaques_021.jpg,morpho+aucune,29,2.875,8.000,0.111,1.000,0.200,10.31,9,"ee | e, | A | NES | Gobelins | LE | ge | 1 | AY"
+plaques_021.jpg,morpho+otsu,29,3.500,10.000,0.091,1.000,0.167,9.39,11,"oe | 9"" | A | Gobelins | va | ve | se | ‘a | A. | eX | A"
+plaques_021.jpg,morpho+sauvola,29,2.250,9.000,0.000,0.000,0.000,8.82,9,e | te | ve | as | a | o | A a | 3
+plaques_021.jpg,mser+aucune,37,2.875,9.000,0.000,0.000,0.000,13.41,9,LIEN | 7% | 4% | Le | LE | à | as | go | à
+plaques_021.jpg,mser+otsu,37,3.250,10.000,0.000,0.000,0.000,13.48,10,Le | et. | LA | Ae | va | as | a À. | aw | ne
+plaques_021.jpg,mser+sauvola,37,2.875,10.000,0.000,0.000,0.000,13.29,10,4. 4 | te | LA | Fe | as | a À. | 3 | Ta
+plaques_021.jpg,union+aucune,60,5.500,15.000,0.062,1.000,0.118,20.77,16,"ee | LIEN | e, | 7% | 4% | A | NES | Le | Gobelins | LE | à | ge | go | à | 1 | AY"
+plaques_021.jpg,union+otsu,60,5.875,16.000,0.059,1.000,0.111,20.29,17,"oe | 9"" | A | Le | et. | Gobelins | LA | Ae | va | ve | se | ‘a | A. | aw | eX | ne | A"
+plaques_021.jpg,union+sauvola,60,4.125,15.000,0.000,0.000,0.000,20.44,15,e | 4. 4 | te | LA | ve | Fe | as | a | 3 | Ta | o | A a | 3
+plaques_022.jpg,sans_localisation,,36.077,76.500,0.013,1.000,0.025,5.24,310,"TRE Aie He LUG ae 42 ik git ue, dy ye A # jp a, Ke me Fa be aie HA A a He Fe Hh en En i se iy 7 27 De RD EX fo ge 7 BTE ie co es Aig ais ae M4 ie ee GB hy a iy Le, 2 He i AA) ay TG if it aes as) VACA Hes ay ’ de le BS is ae x Bie oy fe Wy AL Li je igi & aes Al WY j ne et fe y bei EG is ist An fue 7 a 4 IMPASSE Bete Gi, #4 ue Me a D 4 fia DE LA as te Aye) th 12 eG i 0) Ha ce ie ne iy Ss Ly My He Bi 14 es ( Des POISSONNERIE He) at fat ci Hie $i ee iff i of at A Hd i € 4, es Ae: as Li ‘tte fe 4 aoe 4 oF es: ra Te Leg fe Dy fl 12 ne ah 24, ENA a 4 eu iE a: oe gj 35 42 oa 4 Fo PE We : as Wa i Sig Ris) fs Ht ay 4 pi Ni ae Hy Hoe oe) te ify a CHA ies 2 Wi Bi es, et ba pe Hi ay a AN i Hs eh (2, oy ay ty, A Be a, iy) a) Ui gr i je a) 7 a if ee tie : ne es Wee BERS Op is iy oh J @ ae ye 7 hi a aS ie i i ee ts wh oy (i fe ie Hh Rites, Ds Ye, AE Het 9 Fu fy i ae if hae as is ie i, AG fe i isi fi SH By os pre es ie Crt tae iy cae es tz, Ts ey La MY oo rey uty, it"
+plaques_022.jpg,morpho+aucune,10,0.808,1.000,0.500,0.750,0.600,3.09,6,40 | pre | IMPASSE | ps | DE LA
+plaques_022.jpg,morpho+otsu,10,0.692,0.750,0.500,0.750,0.600,2.94,6,2. | {à | IMPASSE | DE LA | à
+plaques_022.jpg,morpho+sauvola,10,0.500,0.500,0.600,0.750,0.667,3.49,5,"7, | IMPASSE | DE LA | Move"
+plaques_022.jpg,mser+aucune,107,0.731,1.500,0.333,0.750,0.462,35.88,9,Tr! | IMPASSE | 114 | DE LA | ul | SF | 17 | al
+plaques_022.jpg,mser+otsu,107,1.923,4.250,0.190,1.000,0.320,35.79,21,"""+7. | wt | FX | e | g | IMPASSE | iat’ | DE LA | (4 | if | POISSONNERIE | à | fit | 4 | f | oy | ty | as | Fe | A"
+plaques_022.jpg,mser+sauvola,107,1.692,3.500,0.222,1.000,0.364,35.99,18,"Ee | Pa; | sn | Cok, | Me | IMPASSE | 4 | HE | DE LA | “he | POISSONNERIE | 7 | fi. | a | <y | FA | BE"
+plaques_022.jpg,union+aucune,115,1.115,2.250,0.250,0.750,0.375,43.01,12,Tr! | 40 | pre | IMPASSE | ps | 114 | DE LA | ul | SF | 17 | al
+plaques_022.jpg,union+otsu,115,2.231,5.000,0.167,1.000,0.286,41.40,24,"""+7. | wt | FX | e | g | 2. | {à | IMPASSE | iat’ | DE LA | (4 | if | POISSONNERIE | à | fit | 4 | f | oy | ty | as | Fe | A | à"
+plaques_022.jpg,union+sauvola,115,2.000,4.000,0.200,1.000,0.333,46.93,20,"Ee | Pa; | 7, | sn | Cok, | Me | IMPASSE | 4 | HE | DE LA | “he | POISSONNERIE | 7 | fi. | a | <y | FA | BE | Move"
+plaques_023.jpg,sans_localisation,,1.279,3.000,0.037,0.115,0.056,4.57,81,"oe ay ~ <= ile AR j = 7 LAS Ve we = ave BY sy | k a TTL que ——s i-—~ ul ij et a a 1 AE tr A ry => A TAL 7 PME — DM Ai 2h cal 4 E foe +h 4 2 Hee abs es Eason (» * Arr: \ © RUE — DU f Are PREVO © RUE LE | ARLEMAG vi A— eae se LS DENT À ant, += ee: 4 |"
+plaques_023.jpg,morpho+aucune,20,0.823,0.923,0.182,0.077,0.108,6.27,11,ue | RUE | 1 | EL. | ‘Ar: | io | RUE | À f mn | i”)
+plaques_023.jpg,morpho+otsu,20,0.762,0.923,0.182,0.077,0.108,5.92,11,T7 | aul | STR | 4 Arr: | RUE | f de: | D | D | CHARLEMAGNE
+plaques_023.jpg,morpho+sauvola,20,0.891,0.962,0.200,0.038,0.065,5.80,5,aul | 4 Arr: | RUE | dr.
+plaques_023.jpg,mser+aucune,12,0.782,0.962,0.125,0.038,0.059,3.87,8,"PER | 4 Arr: | RUE | d'A, | PREV( | 6 | CHARLEMAGNE,"
+plaques_023.jpg,mser+otsu,12,0.776,0.923,0.222,0.077,0.114,3.75,9,AU | À | RUE D | 4 Ar | RUE | PRÉV | CHARLEMAGHE
+plaques_023.jpg,mser+sauvola,12,0.796,0.962,0.286,0.077,0.121,3.88,7,que D | 4° Arr | RUE | PRÉV | CHARLEMAGNE!
+plaques_023.jpg,union+aucune,23,0.776,0.962,0.083,0.038,0.053,7.24,12,"ue | PER | 1 | EL. | ‘Ar: | io | RUE | À f mn | i”) | CHARLEMAGNE,"
+plaques_023.jpg,union+otsu,23,0.728,0.923,0.143,0.077,0.100,7.15,14,T7 | aul | À | RUE D | STR | 4 Arr: | RUE | f de: | D | D | CHARLEMAGHE
+plaques_023.jpg,union+sauvola,23,0.776,0.962,0.125,0.038,0.059,7.04,8,aul | que D | 4 Arr: | RUE | dr. | CHARLEMAGNE!
+plaques_024.jpg,sans_localisation,,35.667,63.667,0.000,0.000,0.000,4.17,191,"= so = ES | AS Seo eos. À ee a SE = ae SA = aes Ss <r ES i é aS es —_—— oe = Es ne: eS = = LD ee SS et a de La — > Sw = RS 28 es ee ~~ <3 me NS 4a A 4. yy} ey = è ren q fe _ ee a fe = AT pe A, (=) TN ee +, Soa a cS Re ee se ey ie St Se ae à : aS oo oe ae Se ie ae he <= aS piss ee ae oe at 25 a Sox 10} Se = oe Se es SA Re Pre —< 2 SS — KES AR = et 1 ey ay ee ee Se ee LE ee o i \E 7 cs: © es cd =o ae SS oa) 0 Z <= Ne at Sa ES a \S ‘9 BS ne = LE ae << =e SR a ss = Se << Ge 25 a See =e Sa Sp, es ae = a LR Ke ee aS ee RE a et SS ce x ee san ue NS"
+plaques_024.jpg,morpho+aucune,24,0.733,1.333,0.000,0.000,0.000,8.65,4,[PALATINE| | 4 | SN | y
+plaques_024.jpg,morpho+otsu,24,0.867,1.000,0.000,0.000,0.000,7.36,2,‘a | we
+plaques_024.jpg,morpho+sauvola,24,0.800,1.667,0.000,0.000,0.000,7.47,5,o | ce | a | H | se
+plaques_024.jpg,mser+aucune,6,0.800,1.000,0.000,0.000,0.000,2.42,2,(Pag | IQ
+plaques_024.jpg,mser+otsu,6,0.933,1.000,0.000,0.000,0.000,2.28,1,Da
+plaques_024.jpg,mser+sauvola,6,0.600,1.333,0.000,0.000,0.000,2.37,4,"Si | A | ALINE, | IQ"
+plaques_024.jpg,union+aucune,27,0.933,1.667,0.000,0.000,0.000,10.27,5,[PALATINE| | 4 | IQ | SN | y
+plaques_024.jpg,union+otsu,27,0.867,1.000,0.000,0.000,0.000,9.96,2,‘a | we
+plaques_024.jpg,union+sauvola,27,0.800,2.333,0.000,0.000,0.000,9.51,7,o | ce | Si | a | IQ | H | se
+plaques_025.jpg,sans_localisation,,0.543,3.000,0.143,0.500,0.222,2.66,14,C te A J 3 LAGRANGE 1736-1813 ASTRONOME-MATHÉ MATICIEN CG ~ — She re
+plaques_025.jpg,morpho+aucune,7,0.065,0.750,0.400,0.500,0.444,2.29,5,RUE | -AGRANGE | 1736-1813 | ASTRONOME-MATHÉ MATICIEN
+plaques_025.jpg,morpho+otsu,7,0.065,0.750,0.400,0.500,0.444,2.37,5,RUE | AGRANGE | 1736-1813 | ASTRONOME-MATHÉ MATICIEN
+plaques_025.jpg,morpho+sauvola,7,0.065,0.750,0.400,0.500,0.444,2.49,5,RUE | AGRANGE | 1736-1813 | ASTRONOME-MATHÉ MATICIEN
+plaques_025.jpg,mser+aucune,6,0.065,0.750,0.500,0.750,0.600,2.67,6,N | RUE | LAGRANGE | 1736-1813 | ASTRONOME-MATHE MATICIEN
+plaques_025.jpg,mser+otsu,6,0.130,1.000,0.429,0.750,0.545,2.86,7,e i | RUE | LAGRANGE | 1736-1813 | ASTRONOME-MATHÉ MATICIEN
+plaques_025.jpg,mser+sauvola,6,0.043,0.500,0.600,0.750,0.667,3.10,5,RUE | LAGRANGE | 1736-1813 | ASTRONOME-MATHÉ MATICIEN
+plaques_025.jpg,union+aucune,7,0.087,0.750,0.500,0.750,0.600,3.08,6,N | RUE | LAGRANGE | 1736-1813 | ASTRONOME-MATHÉ MATICIEN
+plaques_025.jpg,union+otsu,7,0.043,0.500,0.600,0.750,0.667,2.61,5,RUE | LAGRANGE | 1736-1813 | ASTRONOME-MATHÉ MATICIEN
+plaques_025.jpg,union+sauvola,7,0.043,0.500,0.600,0.750,0.667,2.58,5,RUE | LAGRANGE | 1736-1813 | ASTRONOME-MATHÉ MATICIEN
+plaques_026.jpg,sans_localisation,,26.444,51.200,0.004,0.200,0.008,6.15,257,"— “* Ws JT A »i se v AN apes § A+ Le 21 AR x 4 D #5 ES eae à — À SS ot ae d en Ru vi sa w \* ae ad ims Nr a3 à A VAS LS 2 Qi 1%, Sm LA La fs aa y i (ON NY *% CA Ô Ya SA. % Ÿ Dr «4 Te, po vi abe ~ ""ee à 31 ÿ Vi Vg Mi PP \ — heey int Ds ey ""À es AR “ eo » oS fp Ee PR. th hat A oo fi bh Sy Ra 42 w ii Ve & [Le sa € i d'u on = e (eae a Ge zs KA à ke de ae Ae, = a Ay fé: My Le À Li Li Le Veh We uy sf a) 435; (SR at es) FR S € bi} h LT 44 hes Au ps Wi i) aay 7 2B. | SA = 7 Le 1 Ss NS Wi ST à w ik oy 4 D (LE € aN \ is N if EAT I nes me) ré Q Kg \ nm"" LR AE sao ey ad. ue ds Hy) 5 A as y a SN de 4 4 NA 10° Arr ” 4 k Sale a. aN pr + . ((O + Wa Y fi Mt) La RUE vod Se ÿ \ \ Ni LUC | E W on Ls | SAMP AIX À fi ii { 7 sys, VA 4 D | AY \ a 171 AN"
+plaques_026.jpg,morpho+aucune,26,0.593,1.200,0.250,0.400,0.308,7.69,8,"CF"" | VA | 4 | 10° Arr: | LUCIEN | SAMPAIX | LA"
+plaques_026.jpg,morpho+otsu,26,0.519,1.000,0.429,0.600,0.500,7.68,7,Le | à | Le: | 10° Arrt | LUCIEN | SAMPAIX
+plaques_026.jpg,morpho+sauvola,26,0.556,1.200,0.250,0.400,0.308,7.57,8,Je | LT | y | 10° Arr: | LUCIEN | SAMPAIX | A
+plaques_026.jpg,mser+aucune,12,0.370,0.600,0.400,0.400,0.400,5.44,5,2 | 10° A | LUCIEN | SAMPAIX
+plaques_026.jpg,mser+otsu,12,0.667,1.600,0.200,0.400,0.267,5.16,10,HA | Qt | af | i a. | 10° A | W | LUCIEN | SAMPAIX
+plaques_026.jpg,mser+sauvola,12,0.370,0.600,0.400,0.400,0.400,4.03,5,Oi | 10° A | LUCIEN | SAMPAIX
+plaques_026.jpg,union+aucune,26,0.333,0.800,0.400,0.400,0.400,8.27,5,10° Arr: | LUCIEN | SAMPAIX | LA
+plaques_026.jpg,union+otsu,26,0.963,2.000,0.250,0.600,0.353,8.11,12,Le | HA | à | Le: | Qt | af | i a. | 10° Arrt | LUCIEN | SAMPAIX
+plaques_026.jpg,union+sauvola,26,0.667,1.400,0.222,0.400,0.286,8.12,9,Je | LT | Oi | y | 10° Arr: | LUCIEN | SAMPAIX | A
+plaques_027.jpg,sans_localisation,,68.600,122.000,0.000,0.000,0.000,4.79,244,"À CR ON és a —s À x. Py 7 DY =~ Dp —— Ni { xe { ÿ ON RUN bs = x NN ¢ F2 Sy CE Là B: A UM we re aN AY pest ys I, EX Nd à \e | bind bs ES s = ER y 7% Ka say NT = BRE - me D ya Le N° < D > 2% ms Whee S de Na is e ZI es “Ales. Yon LA Sud “ À B iS o N 4 iS = Ie or g ie) is nae dE Fa EME) maf [1 # 27 Sew = = = SJ | Æ 24 + Sa Mie Ss Æ es = & a | Seeing 4 AN AR Ac’ idl ms fe as Lf i [| rl Es awe 1 FE AY oe Li 7? LA Be nae 7 TE. à L* a ii | f ES —— = 4 2 LE ee <a > ban sel Li a € aby l th we J £ a 8 ry dene IE u ESS mI ae vi LS La 22 LE 4 a if re — Es aa? hes LE 2e aa 4 ie py ni Ss A FE Se zd as bie ~ Ne es À i ri i st Se ae tt ‘a a Dar Ss ee = Ny CAN u 2 ED me Hans ir 3 54 SE a Cs it NE À. de à"
+plaques_027.jpg,morpho+aucune,26,1.300,2.000,0.250,0.500,0.333,7.88,4,CHAPPE | AG | Ce | om
+plaques_027.jpg,morpho+otsu,26,1.200,2.500,0.167,0.500,0.250,7.80,6,Ÿ | aw | CHAPPE | A | AU | my
+plaques_027.jpg,morpho+sauvola,26,1.200,2.500,0.000,0.000,0.000,7.80,5,an | UN | LE | me | aa
+plaques_027.jpg,mser+aucune,47,2.000,3.500,0.222,1.000,0.364,18.35,9,AY | Ne | 42 | Ne 7 | RUE | CHAPPE | dt | il
+plaques_027.jpg,mser+otsu,47,3.600,6.500,0.133,1.000,0.235,19.03,15,Ww | à | Ÿ | Ve. | a\ | IN | 6 | j | LE | RUE | CHAPPE | dt | ib | ae | ti
+plaques_027.jpg,mser+sauvola,47,3.400,7.000,0.000,0.000,0.000,18.95,14,D | Ww | Ÿ a’. | t | k\ | 1-7 | et | ME | Hin | ae | N | a | i
+plaques_027.jpg,union+aucune,63,2.300,4.000,0.200,1.000,0.333,27.07,10,Ne | 42 | Ne 7 | RUE | CHAPPE | dt | AG | Ce | om
+plaques_027.jpg,union+otsu,63,4.000,7.500,0.118,1.000,0.211,24.67,17,Ÿ | aw | à | Ÿ | Ve. | a\ | IN | 6 | j | LE | RUE | CHAPPE | dt | ib | A | AU | my
+plaques_027.jpg,union+sauvola,63,4.000,8.000,0.000,0.000,0.000,26.77,16,D | an | Ÿ a’. | t | k\ | 1-7 | et | UN | LE | ME | Hin | ae | N | me | aa
+plaques_028.jpg,sans_localisation,,0.615,1.250,0.375,0.750,0.500,2.40,16,a” 19€ Arrt Ce RUE BASTE AMIRAL #. ) 1768 - 1814) PA ag we ad
+plaques_028.jpg,morpho+aucune,8,0.333,0.750,0.375,0.375,0.375,3.41,8,Arrt\ | RUE | BAS | ST | AMIRAL | (1768 | 1814 | On
+plaques_028.jpg,morpho+otsu,8,0.231,0.625,0.571,0.500,0.533,2.94,7,Arrt | RUE | BAS | S | AMIRAL | (1768 | 1814
+plaques_028.jpg,morpho+sauvola,8,0.231,0.625,0.571,0.500,0.533,3.04,7,Arrt | RUE | BAS | S | AMIRAL | (1768 | 1814
+plaques_028.jpg,mser+aucune,6,0.051,0.125,1.000,0.875,0.933,3.20,7,19e Arrt | RUE | BASTE | AMIRAL | (1768 | 1814)
+plaques_028.jpg,mser+otsu,6,0.077,0.250,0.857,0.750,0.800,2.87,7,19€ Arrt | RUE | BASTE | AMIRAL | (1768 | 1814)
+plaques_028.jpg,mser+sauvola,6,0.077,0.250,0.857,0.750,0.800,2.32,7,19€ Arrt | RUE | BASTE | AMIRAL | (1768 | 1814)
+plaques_028.jpg,union+aucune,7,0.128,0.250,0.875,0.875,0.875,3.00,8,19e Arrt | RUE | BASTE | AMIRAL | (1768 | 1814) | On
+plaques_028.jpg,union+otsu,7,0.077,0.250,0.857,0.750,0.800,2.62,7,19€ Arrt | RUE | BASTE | AMIRAL | (1768 | 1814)
+plaques_028.jpg,union+sauvola,7,0.077,0.250,0.857,0.750,0.800,2.69,7,19€ Arrt | RUE | BASTE | AMIRAL | (1768 | 1814)
+plaques_029.jpg,sans_localisation,,43.800,73.500,0.000,0.000,0.000,5.07,147,"LE ~ iY ea ne PATATE < je AB ae St Pek bet (ie Es < f/f At Ad: EE, ae ee é RE “ft #< & u Cog od: rea ae LA ae 7 Le ca of, Ae PPS re my D, LS 22. Æ i Ge We Ay es Eds nee se ee #4 L hé ke rat ee Lf \ 3 5 I po"", Ey es ue cé 4 | | ” i RU cg | 2% # “rt aA an De 4 RI Ai OUET À <j 1 Gi eS Ee ee STS NE Ÿ 4 6 NL 4 ui Pe. “6 2s ik gee = ee x es ei: *# te 6 wot 4 aa at jm na +7 DR fj PE wy ote ee =a seston ja: — hs Pr po bi CN Sen: as “cr he. Se ‘7 oe ee"
+plaques_029.jpg,morpho+aucune,10,0.900,1.000,0.000,0.000,0.000,3.87,2,#7} | 7
+plaques_029.jpg,morpho+otsu,10,1.000,1.000,0.000,0.000,0.000,4.18,1,y
+plaques_029.jpg,morpho+sauvola,10,1.000,1.000,0.000,0.000,0.000,3.66,0,
+plaques_029.jpg,mser+aucune,6,0.200,0.500,0.667,1.000,0.800,2.66,3,2 | RUE | RIQUET
+plaques_029.jpg,mser+otsu,6,0.300,0.500,0.667,1.000,0.800,2.55,3,RUE | RIQUET | 2.
+plaques_029.jpg,mser+sauvola,6,0.200,0.500,0.667,1.000,0.800,2.66,3,RUE | RIQUET | D
+plaques_029.jpg,union+aucune,13,0.600,1.000,0.500,1.000,0.667,5.16,4,#7} | RUE | RIQUET | 7
+plaques_029.jpg,union+otsu,13,0.500,1.000,0.500,1.000,0.667,4.94,4,y | RUE | RIQUET | 2.
+plaques_029.jpg,union+sauvola,13,0.200,0.500,0.667,1.000,0.800,5.51,3,RUE | RIQUET | D
+plaques_030.jpg,sans_localisation,,4.542,10.923,0.007,0.077,0.013,3.71,143,"re LS = RS Et we SA “Ve a ame te wee =e 2 4 > Tres = = - es a = = ee =e ae = Pur CAS Se = LE de _ Le < Les LL ne nr a rie Re See ESE ex = 13 Arr Rs oa aes a ae se ws mr FES % NOTRE we > ei = <a ""ue MAO! ie oes RUE +*- col cS = SSASSINE ss + x #. we = > $5: #, _ SADI-LECOIN: + se = Lx ©: = cS = = à a i Es ase a = oes = Me ex = eee a 5 sam 5 a Pe + Fe Bee & =~ = * ZE LA = ad RSS = ce = = = oe 2 oS La 2e = ea ya =, <= Ses"
+plaques_030.jpg,morpho+aucune,38,0.699,0.923,0.429,0.231,0.300,15.40,7,4 | 19° Arrt | re | RUE | “ne | SADI-LECOINTE
+plaques_030.jpg,morpho+otsu,38,0.783,0.846,0.286,0.154,0.200,16.27,7,"""ate | 7 | à | ge. | 19° Arrt | RUE"
+plaques_030.jpg,morpho+sauvola,38,0.747,1.000,0.154,0.154,0.154,14.11,13,e ry | 7 | æ | 2 | 19° Arrt | RUE | Li | v | L | c) | 7
+plaques_030.jpg,mser+aucune,12,0.675,0.923,0.333,0.231,0.273,5.28,9,Lard | LR | oh | 19° Arrt | RUE | OLIC | NOTRI | SADI-LECOINTE
+plaques_030.jpg,mser+otsu,12,0.795,0.923,0.333,0.154,0.211,4.84,6,i | 19° Arrt | RUE | Ll | NOTR
+plaques_030.jpg,mser+sauvola,12,0.723,1.000,0.375,0.231,0.286,3.96,8,re | 19° Arrt | RUE | AU | NOTR | SADI-LECOINTE | ay
+plaques_030.jpg,union+aucune,42,0.663,0.923,0.333,0.231,0.273,17.14,9,Lard | 4 | oh | 19° Arrt | re | RUE | “ne | SADI-LECOINTE
+plaques_030.jpg,union+otsu,42,0.783,0.846,0.286,0.154,0.200,14.84,7,"""ate | 7 | à | ge. | 19° Arrt | RUE"
+plaques_030.jpg,union+sauvola,42,0.771,1.231,0.188,0.231,0.207,13.80,16,e ry | 7 | æ | re | 2 | 19° Arrt | RUE | Li | v | SADI-LECOINTE | ay | L | c) | 7
+plaques_031.jpg,sans_localisation,,3.397,8.778,0.000,0.000,0.000,2.04,79,"sr Dy Dee |. 28 %, aren A VINCI MEL 1"" 1 ""al LE > EA BARAKA LA 10 es À +) FES Hh ni cae Ol LT PE a rieur Th. = a ee 4 Si: ugh pee ss 7 S æ : Cd TRS Erle SA ate ote D> y | + ey À sh Se hw % à * A x Le à % ‘eB! Fa sie oe à sé NO tesco acti —_ as a"
+plaques_031.jpg,morpho+aucune,12,0.937,1.000,0.000,0.000,0.000,3.88,4,M | i. | M | a=
+plaques_031.jpg,morpho+otsu,12,0.889,1.000,0.000,0.000,0.000,6.46,5,"nv"" ve vu | TV. | e"
+plaques_031.jpg,morpho+sauvola,12,0.905,1.000,0.000,0.000,0.000,6.21,5,wt we wa vu | on
+plaques_031.jpg,mser+aucune,18,0.762,1.000,0.200,0.111,0.143,9.24,5,"aver | ve | Auberge | En | ""x"
+plaques_031.jpg,mser+otsu,18,0.857,1.000,0.000,0.000,0.000,9.64,8,“ae | 444 | 444 | Li | uberge | Es | BE | À
+plaques_031.jpg,mser+sauvola,18,0.889,1.000,0.000,0.000,0.000,8.51,6,2 | 4 | 444 | v | Es | x
+plaques_031.jpg,union+aucune,23,0.810,1.000,0.143,0.111,0.125,10.94,7,"M | aver | i. | M | Auberge | En | ""x"
+plaques_031.jpg,union+otsu,23,0.841,1.111,0.000,0.000,0.000,9.73,10,"“ae | nv"" ve vu | TV. | e | Li | uberge | BE | À"
+plaques_031.jpg,union+sauvola,23,0.873,1.000,0.000,0.000,0.000,10.03,8,2 | wt we wa vu | v | on | x
+plaques_032.jpg,sans_localisation,,269.500,198.000,0.000,0.000,0.000,6.49,198,"4 les ES 1 » NI gl ah) @ ""4 | À ©) «| 4 by 4 ; y X = = TX & ÿ ® © i 1% ES as eS a a Pe — Ei Gin ND =. Tal oc) \ Il (| | A (Mi | MN ill th <Q A Be fi aa Tal \ x he = ly Il fas => — | Il Il \)) = Be, D Br eal ir =— | ly nae | ( ™ = \ we — EEE \ tN \e DE S\ \ <a Ÿ ee . ge _ i @ oh oo = S = AW A. = As A mie i) oo £4 ~ Ÿ pe at e Swe 4) — 4 EN 2 re Re ie ee fs 2 He 7 is s iy sp 0 ale wae 19 ths we a a We ee ai ee te oe Ne A Fe de ig ee By 4: fe 8 je Se, te! A Le Æ aN hy je ES 4 Es Ne Te a D) A ae a TA he a fe we Fr à aS we at Pr à ys se es"
+plaques_032.jpg,morpho+aucune,9,1.000,1.000,0.000,0.000,0.000,3.57,0,
+plaques_032.jpg,morpho+otsu,9,1.000,1.000,0.000,0.000,0.000,4.17,1,A.
+plaques_032.jpg,morpho+sauvola,9,6.000,4.000,0.000,0.000,0.000,4.59,4,æ | 9744 si 10
+plaques_032.jpg,mser+aucune,6,3.000,2.000,0.000,0.000,0.000,3.09,2,ao | Bet
+plaques_032.jpg,mser+otsu,6,2.000,1.000,0.000,0.000,0.000,3.76,1,"hie,"
+plaques_032.jpg,mser+sauvola,6,1.000,1.000,0.000,0.000,0.000,3.75,1,4
+plaques_032.jpg,union+aucune,14,3.000,2.000,0.000,0.000,0.000,8.15,2,ao | Bet
+plaques_032.jpg,union+otsu,14,3.500,2.000,0.000,0.000,0.000,7.43,2,"hie, | A."
+plaques_032.jpg,union+sauvola,14,7.000,5.000,0.000,0.000,0.000,7.72,5,4 | æ | 9744 si 10
+plaques_033.jpg,sans_localisation,,6.808,10.167,0.047,0.500,0.086,3.26,64,"A SN ee 4e ta ul iil | “44% fj Aas) 27 RUE IBN HAJAR WA (MW \ Ti — q af ei We sare IN Ve ae ey | a |, ST Me Ae à Fe — ee Lee £ ces re i Cle à i itl a 4, (hu | wa 4 Fe SS \E <= ——— — sie SE tt i"
+plaques_033.jpg,morpho+aucune,15,0.846,1.000,0.000,0.000,0.000,8.67,6,eB | \uf | AMBASSADE | EN | i | J\
+plaques_033.jpg,morpho+otsu,15,0.885,1.000,0.000,0.000,0.000,6.94,4,AMBASSADE DE FRANCE | 4
+plaques_033.jpg,morpho+sauvola,15,0.846,1.000,0.000,0.000,0.000,7.47,4,a | AMBASSADE DE FRANCE
+plaques_033.jpg,mser+aucune,10,0.846,1.000,0.000,0.000,0.000,4.62,3,Le | E | AMBASSADE
+plaques_033.jpg,mser+otsu,10,1.115,1.333,0.000,0.000,0.000,4.06,8,mat | Er | RE À Le | AMBASSADE DE FRANCE
+plaques_033.jpg,mser+sauvola,10,0.885,1.000,0.000,0.000,0.000,4.24,6,a E | BE. | AMBASSADE DE FRANCE
+plaques_033.jpg,union+aucune,20,0.846,1.000,0.000,0.000,0.000,10.62,6,eB | \uf | AMBASSADE | EN | i | J\
+plaques_033.jpg,union+otsu,20,1.077,1.333,0.000,0.000,0.000,9.13,8,mat | RE À Le | AMBASSADE DE FRANCE | 4
+plaques_033.jpg,union+sauvola,20,0.846,1.000,0.000,0.000,0.000,8.09,6,a E | a | AMBASSADE DE FRANCE
+plaques_034.jpg,sans_localisation,,4.417,9.500,0.000,0.000,0.000,2.90,57,"ASE pe Le fs tn Fe LT ee Ai, ARE mr ~ a re. se Le ‘ee bas *¢ + L Va e 6 À is > ms Cae ye. # ‘oo consi = rb pen ceo ae he à Rent er se Pr LS y ~ ” ere tm, ke S *s e: as & mail"
+plaques_034.jpg,morpho+aucune,10,0.722,1.000,0.000,0.000,0.000,4.88,5,L | ANMIA BE | à | éd
+plaques_034.jpg,morpho+otsu,10,0.972,1.000,0.000,0.000,0.000,3.63,1,ao
+plaques_034.jpg,morpho+sauvola,10,0.944,1.000,0.000,0.000,0.000,4.17,2,8 | pa
+plaques_034.jpg,mser+aucune,11,0.750,1.333,0.125,0.167,0.143,4.59,8,5% | Ax | r22 | CALLE | LAHMED GANMIABS | ae | CET
+plaques_034.jpg,mser+otsu,11,0.722,0.833,0.200,0.167,0.182,4.34,5,CALLE | x | ae | ad | wey
+plaques_034.jpg,mser+sauvola,11,0.806,1.000,0.167,0.167,0.167,5.46,6,4 | CALLE | ool | CR | 2 5.
+plaques_034.jpg,union+aucune,16,0.639,1.333,0.000,0.000,0.000,8.92,8,5% | L | Ax | LAHMED GANMIABS | ae | éd | CET
+plaques_034.jpg,union+otsu,16,0.833,1.000,0.000,0.000,0.000,6.07,4,x | ae | ad | wey
+plaques_034.jpg,union+sauvola,16,0.861,1.167,0.000,0.000,0.000,5.52,7,8 | pa | 4 | ool | CR | 2 5.
+plaques_035.jpg,sans_localisation,,19.235,30.250,0.016,0.500,0.031,5.01,123,"| À LP” D He D =< me 4 % ""2 ——— — SERRE | \ UE SALON PE THE — = Ss — = — di. YY ra. ME = iii i | =u À r) Qi"" ÿ cr \| = Un Â à] ) = lig L Bi kl QD >. —— _\ ae QE Sta: ‘aa a ». A) D | 4 À ” ENS i 7 J = \ | | Ak A À 4 1 \ W4 Ÿ 4 4 f| ; AC AZ ai 7 Vv cL Ww | VA § IN ASTON 1) Ny Ay NN LE | ; aera VLEET | à 0 TLD LED 4 V7 a = es FAO ff fi Es VEN"
+plaques_035.jpg,morpho+aucune,49,3.118,4.750,0.143,0.750,0.240,21.19,21,Ve | fy | #7 | IN | SALON PE THE | N KATY | Ÿ | à | FA | DE | Ww | Je | Le. | Cea | à | A | LES | dx
+plaques_035.jpg,morpho+otsu,49,1.059,1.750,0.333,0.750,0.462,18.70,9,SALON DE THE | ‘0 | À | L | À | À | 2
+plaques_035.jpg,morpho+sauvola,49,0.765,1.500,0.333,0.750,0.462,18.95,9,"3 | Le | SALON DE THE | 2 | 4, | st | n"
+plaques_035.jpg,mser+aucune,31,1.118,1.500,0.333,0.750,0.462,11.77,9,ey | là | SALON DE THE | LEON | 2.8 | x | NI
+plaques_035.jpg,mser+otsu,31,1.941,3.250,0.133,0.500,0.211,12.57,15,LE | 4 | SALON DE TH | ll | im i LT | 8.8 | la | à | 7 | tos | AY
+plaques_035.jpg,mser+sauvola,31,1.647,2.250,0.200,0.500,0.286,12.86,10,"SALON PE THE | Ai | 1 | Cla | t | “pal, oth | “tw"
+plaques_035.jpg,union+aucune,50,2.294,3.500,0.125,0.500,0.200,17.65,16,là | fy | IN | SALON PE THE | N KATY | Ÿ | à | LEON | FA | Je | Cea | à | NI
+plaques_035.jpg,union+otsu,50,1.824,3.000,0.200,0.750,0.316,16.10,15,4 | ll | SALON DE THE | ‘0 | À | im i LT | L | la | 7 | tos | AY
+plaques_035.jpg,union+sauvola,50,1.706,2.000,0.273,0.750,0.400,16.55,11,"3 | SALON DE THE | Ai | 1 | Cla | t | “pal, oth | “tw"
+plaques_036.jpg,sans_localisation,,2.321,4.667,0.000,0.000,0.000,2.14,28,"—— pan a — a. >, D Nl ="" |! LID. > = = = A: = ES = =a. re ee Pa = = & = 47"
+plaques_036.jpg,morpho+aucune,0,1.000,1.000,0.000,0.000,0.000,0.06,0,
+plaques_036.jpg,morpho+otsu,0,1.000,1.000,0.000,0.000,0.000,0.06,0,
+plaques_036.jpg,morpho+sauvola,0,1.000,1.000,0.000,0.000,0.000,0.06,0,
+plaques_036.jpg,mser+aucune,0,1.000,1.000,0.000,0.000,0.000,0.31,0,
+plaques_036.jpg,mser+otsu,0,1.000,1.000,0.000,0.000,0.000,0.31,0,
+plaques_036.jpg,mser+sauvola,0,1.000,1.000,0.000,0.000,0.000,0.31,0,
+plaques_036.jpg,union+aucune,0,1.000,1.000,0.000,0.000,0.000,0.37,0,
+plaques_036.jpg,union+otsu,0,1.000,1.000,0.000,0.000,0.000,0.37,0,
+plaques_036.jpg,union+sauvola,0,1.000,1.000,0.000,0.000,0.000,0.37,0,
+plaques_037.jpg,sans_localisation,,32.042,64.250,0.008,0.500,0.015,5.17,259,"=~ A. DOUAR CHLOUH ep V pil XV Me él PE FL AG |"" ae See is Dk + Ne saat @ Se, —————— = à rot is = A 21 = Ee je eae i M4 5 ef a ee ge » = Ts F Es Se oe Se We i eee ES Fi ae ci State Way i oe) NM A) BZ iN, 4 Vi ut RES Es LL i i | i A i) 2 i; 1) eae S) Sse 2 nt aN ai N À 2 ¥ S Ve ye Na NS 4 ei N Za if, A Ke Ue ce ie Ve xX ts a hs x de NN Ka Ke A = Ss a ae ne 2 i) EE sa ~ Es a À ee iS see ma re Bey ie we LE un ea FE ies 7e Be is a z sa SS = TAGS = ees or Z ee igs ei = LS eA 23, mee Fe eo) AE is EE BA Re Se = Eze a ne mis ee A ee Aas rot Pe oe ET CA ce ze Écé se SE ET RE A ee Bi yee ay 2 ie ee iS a: RE ar ee Poi. ESS LA LEA ips ES, SS ere Lie oe Ye, PRE a ae De ei ie ag TOR pa ees et ve a 7e ey CPE BEES oe psa ie 55 =e aS = a DS oe 2 TES = aS FF. rs PTT fos Bi 7e + Be ee ENS Le"
+plaques_037.jpg,morpho+aucune,21,0.500,0.500,1.000,0.500,0.667,12.56,2,DOUAR CHLOUH
+plaques_037.jpg,morpho+otsu,21,0.917,2.000,0.200,0.500,0.286,9.25,10,fos | DOUAR CHLOUH | S | oy | ps PE | Le | La | bd
+plaques_037.jpg,morpho+sauvola,21,0.542,1.500,0.250,0.500,0.333,9.58,8,DOUAR CHLOUH | 8 | à | À | teh | a | tr
+plaques_037.jpg,mser+aucune,14,0.417,0.500,0.500,0.500,0.500,6.88,4,DOUAR CHLOUH | fi | ae
+plaques_037.jpg,mser+otsu,14,0.417,0.500,0.500,0.500,0.500,5.94,4,DOUAR CHLOUH | a | a
+plaques_037.jpg,mser+sauvola,14,0.458,1.000,0.333,0.500,0.400,6.74,6,DOUAR CHLOUH | pi | AL of | ie
+plaques_037.jpg,union+aucune,32,0.458,0.500,0.667,0.500,0.571,16.35,3,DOUAR CHLOUH | fi
+plaques_037.jpg,union+otsu,32,1.083,2.500,0.167,0.500,0.250,15.47,12,fos | DOUAR CHLOUH | S | a | a | oy | ps PE | Le | La | bd
+plaques_037.jpg,union+sauvola,32,1.042,2.500,0.167,0.500,0.250,17.95,12,DOUAR CHLOUH | 8 | pi | AL of | à | À | ie | teh | a | tr
+plaques_038.jpg,sans_localisation,,12.630,23.800,0.025,0.600,0.047,4.51,122,"wi \ EN N\ ‘i rai NG AY “ii N S ay i Ne (A \ \ N ‘ aly. oN NN N \\ NG Sih) \ We Xe Al pt S N À ee N N ‘ Ts GARE EL JADIDA ii mt) Athan at à] NY, SN vi f | (Af ar = a. . (i ss À) 25 i li se pa sll à ( La S| tle — ua | er al dr pps | ss —"" —_ = ig 2 * x 5 . « oe Ce Sa. XY XX = + LOU =~ AX fae — a ae art jar De a CN pus aC KZ KZ Salle — rh 24 Zz ay por dr ph"
+plaques_038.jpg,morpho+aucune,28,0.926,1.800,0.250,0.600,0.353,12.88,12,RY | SN | GARE EL JADIDA | PA | El | en | 62: | D | ie ER
+plaques_038.jpg,morpho+otsu,28,0.519,0.600,0.500,0.600,0.545,13.66,6,ry | GARE EL JADIDA | ti | on
+plaques_038.jpg,morpho+sauvola,28,0.519,0.800,0.429,0.600,0.500,10.84,7,N | GARE EL JADIDA | 4_ban | a | 1.
+plaques_038.jpg,mser+aucune,27,0.889,1.800,0.250,0.600,0.353,11.60,12,iN | GARE EL JADIDA | di | EN | il | All | W | r | tid | 4
+plaques_038.jpg,mser+otsu,27,0.630,1.200,0.333,0.600,0.429,11.75,9,Ÿ | itt | GARE EL JADIDA | (an | ih a | oo
+plaques_038.jpg,mser+sauvola,27,0.963,1.800,0.250,0.600,0.353,11.97,12,à | GARE EL JADIDA | isy | HAE | ai | (as | il a | Li | Oo
+plaques_038.jpg,union+aucune,45,1.407,2.800,0.176,0.600,0.273,20.35,17,RY | iN | SN | GARE EL JADIDA | PA | El | en | W | tid | 62: | r | 4 | D | ie ER
+plaques_038.jpg,union+otsu,45,0.741,1.400,0.300,0.600,0.400,21.70,10,Ÿ | ry | itt | GARE EL JADIDA | ti | ih a | oo
+plaques_038.jpg,union+sauvola,45,0.667,1.400,0.300,0.600,0.400,15.39,10,à | N | GARE EL JADIDA | 4_ban | a | il a | Oo
+plaques_039.jpg,sans_localisation,,2.733,9.500,0.000,0.000,0.000,1.99,19,ig A / À 4 } 4 | Asi el V2 /} — — y à — Hi) la
+plaques_039.jpg,morpho+aucune,8,1.000,2.000,0.200,0.500,0.286,2.43,5,PA | Change | Pa | Jw ANUS
+plaques_039.jpg,morpho+otsu,8,0.600,1.000,0.333,0.500,0.400,2.49,3,wy | Change | y
+plaques_039.jpg,morpho+sauvola,8,0.867,1.000,0.000,0.000,0.000,2.36,2,L.. | A
+plaques_039.jpg,mser+aucune,5,0.733,1.000,0.000,0.000,0.000,1.92,2,Wh | FA
+plaques_039.jpg,mser+otsu,5,0.733,1.000,0.500,0.500,0.500,1.91,2,Change | a
+plaques_039.jpg,mser+sauvola,5,0.867,1.000,0.000,0.000,0.000,1.82,2,A= | peo.
+plaques_039.jpg,union+aucune,8,0.800,1.000,0.000,0.000,0.000,3.08,2,PA | Pa
+plaques_039.jpg,union+otsu,8,0.600,1.000,0.333,0.500,0.400,3.29,3,wy | Change | a
+plaques_039.jpg,union+sauvola,8,0.867,1.000,0.000,0.000,0.000,3.50,2,A= | peo.
+plaques_041.jpg,sans_localisation,,61.000,118.000,0.000,0.000,0.000,3.70,118,"~— = al — —r — Se mms i freer) — der — ae ———— Tike es = LÀ Da er Fe SS ; M SECTE ie i er =— mall <a ne as Lh Rf =. Set UE 4 A) $e 2 6 vee i @\ 2. ¥)4 xx Sis 27 27 PA #2 EYP IR 4% RE ta FT PLAN CR LE Bite ñ 1 se <| AL oe ey Lee EC iy Ë 3| FA Fu ‘à 4 He AAS > a Hae + Y BE ao bd et Hifi “AT ir gr i #7 4 794 3) Bs 33 Hy Poy roe wy a “J Cet Vie à"" Aya Aa, 24 — See SE."
+plaques_041.jpg,morpho+aucune,31,2.000,4.000,0.000,0.000,0.000,12.90,4,all | #4 | IE LE
+plaques_041.jpg,morpho+otsu,31,2.667,6.000,0.000,0.000,0.000,10.28,6,“ag | x | y | 1. | x | TRE
+plaques_041.jpg,morpho+sauvola,31,4.000,9.000,0.000,0.000,0.000,10.43,9,LA | Le | iii | x | x | se | AR | ae | s
+plaques_041.jpg,mser+aucune,33,1.000,2.000,0.000,0.000,0.000,11.85,2,mr | FF
+plaques_041.jpg,mser+otsu,33,5.500,11.000,0.000,0.000,0.000,10.95,11,ad | v Vv | Ain | x à | mr | i. | bette | ir | DE
+plaques_041.jpg,mser+sauvola,33,5.000,9.000,0.000,0.000,0.000,11.74,9,fie | ‘gs | of. | “7 | HEE? 6 | Be | 1e | vy
+plaques_041.jpg,union+aucune,54,2.500,5.000,0.000,0.000,0.000,19.25,5,all | #4 | IE LE | FF
+plaques_041.jpg,union+otsu,54,6.333,14.000,0.000,0.000,0.000,18.09,14,“ag | v Vv | Ain | x | x à | y | 1. | i. | x | TRE | ir | DE
+plaques_041.jpg,union+sauvola,54,6.333,13.000,0.000,0.000,0.000,17.70,13,LA | fie | ‘gs | of. | Le | “7 | x | x | AR | Be | se | ae | s
+plaques_042.jpg,sans_localisation,,2.840,7.000,0.012,0.083,0.021,2.62,85,A A ee Cc L ZA tr ri i == a <L# a à AL 4 | til i Fr 44 il —— | | el) A — sae | ne 22 ae = ry ae ere NGHARD | | 1 Si es - - it Al @ Il VA À: 4% NC MA FRA) (K I u BA. (à 4! \ 14 “agageanel ae | 1 Ay a a er eT ite) ea saga be A. th ha ETAT iene) Aer z :) =
+plaques_042.jpg,morpho+aucune,31,0.853,1.000,0.000,0.000,0.000,9.42,11,i | ~Gni | Te | 0 2 | 2 | 17 | 2 | A | ig À
+plaques_042.jpg,morpho+otsu,31,0.867,1.000,0.000,0.000,0.000,9.58,6,iil | n | Gn | 4 | a | 16000
+plaques_042.jpg,morpho+sauvola,31,0.893,1.000,0.000,0.000,0.000,9.56,5,1 | L | Gn | 9 | r?
+plaques_042.jpg,mser+aucune,21,0.813,1.000,0.000,0.000,0.000,7.52,7,Weal | TT | Blu | as! | aA | 17 | AN
+plaques_042.jpg,mser+otsu,21,0.867,0.917,0.167,0.083,0.111,6.47,6,el | 7 | Il | Blu | OMA | 16000
+plaques_042.jpg,mser+sauvola,21,0.813,1.000,0.000,0.000,0.000,6.54,7,angie. | 99 | il | Blu | “aa | 9 | iA
+plaques_042.jpg,union+aucune,44,0.787,1.250,0.000,0.000,0.000,13.98,15,Weal | TT | i | ~Gni | Blu | Te | as! | 0 2 | aA | 17 | 2 | A | ig À
+plaques_042.jpg,union+otsu,44,0.787,1.000,0.091,0.083,0.087,13.46,11,iil | el | n | 7 | Il | Gn | Blu | 4 | a | OMA | 16000
+plaques_042.jpg,union+sauvola,44,0.760,1.000,0.000,0.000,0.000,13.32,10,angie. | 1 | 99 | L | il | Gn | Blu | “aa | 9 | r?
+plaques_043.jpg,sans_localisation,,3.977,12.333,0.000,0.000,0.000,3.98,74,vt “as =. ES RS. F = =. ~ 7 = Su g. : —_— LE SR = — < == = SSSR — ~ <a b aN = BS = == od ee —— — ye ——S a 5 Pe EE 2 = 25 = — a4 eee _— —_ ss ~= Æ = - Le _ — = == = <> + È \ VN à 2 + RS rs ~ ~
+plaques_043.jpg,morpho+aucune,2,1.000,1.000,0.000,0.000,0.000,0.63,0,
+plaques_043.jpg,morpho+otsu,2,1.000,1.000,0.000,0.000,0.000,0.67,0,
+plaques_043.jpg,morpho+sauvola,2,0.977,1.000,0.000,0.000,0.000,0.65,1,a
+plaques_043.jpg,mser+aucune,0,1.000,1.000,0.000,0.000,0.000,0.25,0,
+plaques_043.jpg,mser+otsu,0,1.000,1.000,0.000,0.000,0.000,0.25,0,
+plaques_043.jpg,mser+sauvola,0,1.000,1.000,0.000,0.000,0.000,0.25,0,
+plaques_043.jpg,union+aucune,2,1.000,1.000,0.000,0.000,0.000,0.85,0,
+plaques_043.jpg,union+otsu,2,1.000,1.000,0.000,0.000,0.000,0.86,0,
+plaques_043.jpg,union+sauvola,2,0.977,1.000,0.000,0.000,0.000,0.98,1,a

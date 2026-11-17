@@ -1,0 +1,18 @@
+\begin{table}[htbp]
+\centering
+\small
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{lccccccc}
+\toprule
+Configuration & F1 méd. [IC 95\,\%] & F1 moy. & Préc. méd. & Rappel méd. & CER méd. & $+/=/-$ & $p$ \\
+\midrule
+baseline : psm 3 & 0{,}00 [0{,}00\,; 0{,}00] & 0{,}09 & 0{,}00 & 0{,}00 & 1{,}00 & 7/23/20 & 0{,}049 \\
+baseline : psm 11 & 0{,}01 [0{,}00\,; 0{,}03] & 0{,}09 & 0{,}01 & 0{,}12 & 6{,}59 & \multicolumn{2}{c}{référence} \\
+etape2 : bilateral + clahe & 0{,}04 [0{,}01\,; 0{,}07] & 0{,}10 & 0{,}02 & 0{,}19 & 4{,}35 & 27/15/8 & 0{,}003 \\
+etape3 : gris (Tesseract) & 0{,}02 [0{,}00\,; 0{,}04] & 0{,}07 & 0{,}01 & 0{,}17 & 8{,}41 & 21/14/15 & 0{,}400 \\
+etape4\_v2 : mser + otsu & 0{,}28 [0{,}12\,; 0{,}41] & 0{,}33 & 0{,}25 & 0{,}40 & 0{,}67 & 32/14/4 & $<$\,0{,}001 \\
+\bottomrule
+\end{tabular}}
+\caption{Progression de la baseline à la configuration finale (50 images). Pour les étapes 2 et 3, meilleure configuration de l'étape. $+/=/-$ : images où le F1 est meilleur, égal ou moins bon que la baseline psm 11 ; $p$ : test apparié des rangs signés de Wilcoxon.}
+\label{tab:principal}
+\end{table}

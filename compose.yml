@@ -1,9 +1,41 @@
-# Raccourci pour lancer le pipeline dans Docker sans retaper les volumes.
-# data/ et results/ restent sur votre disque : le conteneur les lit et y écrit.
+# Raccourcis pour lancer le projet dans Docker sans retaper les options.
+#
+#   docker compose build                      construit l'image du pipeline
+#   docker compose run --rm ocr <script> ...  lance un script (voir README)
+#   docker compose run --rm docs              compile le rapport et la présentation
+#
+# Les dossiers du projet restent sur votre disque : le conteneur les lit et
+# y écrit directement.
 services:
   ocr:
     build: .
     image: malvoyants
+    # Les fichiers créés dans results/ vous appartiennent (et non à root).
+    # Sous WSL et Linux, le premier utilisateur a l'identifiant 1000 ; sinon :
+    #   export UID GID=$(id -g)   avant docker compose
+    user: "${UID:-1000}:${GID:-1000}"
     volumes:
-      - ./data:/app/data
-      - ./results:/app/results
+      - ./data:/app/data             # images, vérités terrain, SOURCES.csv
+      - ./results:/app/results       # sorties des scripts
+
+  # Compilation LaTeX (rapport + présentation) sans installer TeX Live.
+  # Image officielle TeX Live complète (plusieurs Go, téléchargée une seule
+  # fois). Profil « docs » : elle n'est ni téléchargée ni lancée par
+  # « docker compose build » ou « up » ; seulement par « docker compose run --rm docs ».
+  docs:
+    image: texlive/texlive:latest
+    profiles: ["docs"]
+    user: "${UID:-1000}:${GID:-1000}"
+    environment:
+      HOME: /tmp
+    working_dir: /projet
+    volumes:
+      - ./docs:/projet/docs
+      - ./results/benchmark:/projet/results/benchmark:ro
+    command:
+      - sh
+      - -c
+      - >
+        cd /projet/docs/rapport && latexmk -pdf -interaction=nonstopmode rapport.tex && latexmk -c rapport.tex &&
+        cd /projet/docs/presentation && latexmk -pdf -interaction=nonstopmode presentation.tex && latexmk -c presentation.tex &&
+        echo "PDF : docs/rapport/rapport.pdf et docs/presentation/presentation.pdf"
